@@ -17,6 +17,7 @@ find_package(Qt5 COMPONENTS
         Core
         Gui
         Widgets
+        Charts
         REQUIRED)
 
 
@@ -38,11 +39,14 @@ add_executable(untitled87
         stockmarket.ui
         transaction.cpp
         transaction.hpp
-        transaction.ui)
+        transaction.ui
+        ConnectionTool.cpp
+        ConnectionTool.hpp)
 
 target_link_libraries(untitled87
         Qt5::Core
         Qt5::Gui
         Qt5::Widgets
+        Qt5::Charts
         ${PQXX_LIB} ${PQ_LIB}
 )

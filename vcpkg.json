@@ -1,0 +1,21 @@
+{
+  "name" : "untitled87",
+  "version-string" : "1.0.0",
+  "builtin-baseline" : "a293ce5897b839da7c22fbb2dc07943e3646f58a",
+  "dependencies" : [ {
+    "name" : "libpqxx",
+    "version>=" : "7.7.4"
+  }, {
+    "name" : "libpq",
+    "version>=" : "15.3"
+  }, {
+    "name" : "qtcharts",
+    "version>=" : "6.6.0"
+  }, {
+    "name" : "qt5-charts",
+    "version>=" : "5.15.11"
+  }, {
+    "name" : "wxcharts",
+    "version>=" : "2022-07-05"
+  } ]
+}
