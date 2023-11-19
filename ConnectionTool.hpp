@@ -13,4 +13,4 @@ public:
 };
 
 
-#endif //UNTITLED87_CONNECTIONTOOL_HPP
+#endif
