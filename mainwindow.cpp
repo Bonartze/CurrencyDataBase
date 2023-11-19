@@ -30,6 +30,7 @@ MainWindow::MainWindow(QWidget *parent) : QWidget(parent), ui(new Ui::MainWindow
 
     for (int i = 0; i < 5; i++) {
         insert_buttons[i]->setFixedSize(300, 200);
+        insert_buttons[i]->setFont(QFont("Arial", 14, QFont::Bold));
         insert_buttons[i]->setStyleSheet("background-color: blue;");
     }
 
@@ -48,7 +49,6 @@ MainWindow::MainWindow(QWidget *parent) : QWidget(parent), ui(new Ui::MainWindow
 
     vl->addWidget(label, 0, Qt::AlignCenter);
     vl->addLayout(layout);
-
 
 
     connect(insert_buttons[0], SIGNAL(clicked()), this, SLOT(onButtonClicked0()));

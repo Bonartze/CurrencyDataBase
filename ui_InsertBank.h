@@ -1,11 +1,3 @@
-/********************************************************************************
-** Form generated from reading UI file 'insertbank.ui'
-**
-** Created by: Qt User Interface Compiler version 5.15.3
-**
-** WARNING! All changes made in this file will be lost when recompiling UI file!
-********************************************************************************/
-
 #ifndef UI_INSERTBANK_H
 #define UI_INSERTBANK_H
 
@@ -44,19 +36,19 @@ public:
         retranslateUi(InsertBank);
 
         QMetaObject::connectSlotsByName(InsertBank);
-    } // setupUi
+    }
 
     void retranslateUi(QMainWindow *InsertBank)
     {
         InsertBank->setWindowTitle(QCoreApplication::translate("InsertBank", "InsertBank", nullptr));
-    } // retranslateUi
+    }
 
 };
 
 namespace Ui {
     class InsertBank: public Ui_InsertBank {};
-} // namespace Ui
+}
 
 QT_END_NAMESPACE
 
-#endif // UI_INSERTBANK_H
+#endif

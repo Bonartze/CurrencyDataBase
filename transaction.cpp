@@ -14,25 +14,26 @@ Transaction::Transaction(QWidget *parent) :
     labels[1] = new QLabel("Account id-i: ", this);
     labels[2] = new QLabel("Amount: ", this);
     labels[3] = new QLabel("Date (year): ", this);
-
+    QFont font("Arial", 10, QFont::Bold);
     for (int i = 0; i < 4; i++) {
         labels[i]->move(2, 10 + 50 * i);
+        labels[i]->setFont(font);
         labels[i]->show();
     }
 
     buttons[0] = new QPushButton("Insert data", this);
     buttons[1] = new QPushButton("Get transaction statistics", this);
-    buttons[2] = new QPushButton("Clear the table", this);
-    buttons[3] = new QPushButton("Delete note from the table", this);
-
+    buttons[3] = new QPushButton("Clear the table", this);
+    buttons[2] = new QPushButton("Delete note from the table", this);
 
     connect(buttons[0], SIGNAL(clicked()), this, SLOT(onButtonClicked()));
     connect(buttons[1], SIGNAL(clicked()), this, SLOT(onButtonClickedTransactionStatistics()));
-    connect(buttons[2], SIGNAL(clicked()), this, SLOT(onButtonClickedDeleted()));
-    connect(buttons[3], SIGNAL(clicked()), this, SLOT(onButtonClickedDeletedOne()));
+    connect(buttons[3], SIGNAL(clicked()), this, SLOT(onButtonClickedDeleted()));
+    connect(buttons[2], SIGNAL(clicked()), this, SLOT(onButtonClickedDeletedOne()));
 
     for (int i = 0; i < 4; i++) {
         buttons[i]->setFixedSize(300, 200);
+        buttons[i]->setFont(QFont("Arial", 14, QFont::Bold));
         buttons[i]->setStyleSheet("background-color: blue;");
 
     }
@@ -67,77 +68,104 @@ Transaction::~Transaction() {
 }
 
 void Transaction::onButtonClicked() {
-    std::string id = insert_transaction_line[0]->text().toStdString();
-    std::string account_id_from = insert_transaction_line[1]->text().toStdString();
-    std::string amount = insert_transaction_line[2]->text().toStdString();
-    std::string date = insert_transaction_line[3]->text().toStdString();
-    pqxx::work w(ConnectionTool::GetConnect());
-    w.exec_params("INSERT INTO public.\"Transaction\" VALUES ($1, $2, $3, $4);", id, account_id_from, amount, date);
-    w.commit();
-    for (int i = 0; i < 4; i++)
-        insert_transaction_line[i]->clear();
+    try {
+        std::string id = insert_transaction_line[0]->text().toStdString();
+        std::string account_id_from = insert_transaction_line[1]->text().toStdString();
+        std::string amount = insert_transaction_line[2]->text().toStdString();
+        std::string date = insert_transaction_line[3]->text().toStdString();
+        pqxx::work w(ConnectionTool::GetConnect());
+        w.exec_params("INSERT INTO public.\"Transaction\" VALUES ($1, $2, $3, $4);", id, account_id_from, amount, date);
+        w.commit();
+        for (int i = 0; i < 4; i++)
+            insert_transaction_line[i]->clear();
+    }
+    catch (std::exception &ex) {
+        QMessageBox::critical(nullptr, "Error", ex.what(), QMessageBox::Ok);
+    }
 
 }
 
 void Transaction::onButtonClickedTransactionStatistics() {
-    pqxx::work w(ConnectionTool::GetConnect());
-    auto query_res = w.exec("SELECT "
-                            "\"Transaction\".date, "
-                            "SUM(\"Transaction\".amount) AS Got "
-                            "FROM "
-                            "public.\"Transaction\" "
-                            "JOIN "
-                            "public.\"Account\" ON public.\"Account\".id = public.\"Transaction\".account_id_from "
-                            "GROUP BY "
-                            "\"Transaction\".date, \"Transaction\".account_id_from "
-                            "ORDER BY "
-                            "\"Transaction\".date ASC;");
-    QStringList categories;
-    barSet = new QtCharts::QBarSet("Transacted Money");
+    try {
+        pqxx::work w(ConnectionTool::GetConnect());
+        auto query_res = w.exec("SELECT "
+                                "\"Transaction\".date, "
+                                "SUM(\"Transaction\".amount) AS Got "
+                                "FROM "
+                                "public.\"Transaction\" "
+                                "JOIN "
+                                "public.\"Account\" ON public.\"Account\".id = public.\"Transaction\".account_id_from "
+                                "GROUP BY "
+                                "\"Transaction\".date, \"Transaction\".account_id_from "
+                                "ORDER BY "
+                                "\"Transaction\".date ASC;");
+        try {
+            if (query_res.empty())
+                throw QException();
+        }
+        catch (...) {
+            QMessageBox::critical(nullptr, "Error", "Empty query result", QMessageBox::Ok);
+        }
 
-    for (const auto &row: query_res) {
-        QString year = QString::fromStdString(row[0].c_str());
-        categories << year;
+        QStringList categories;
+        barSet = new QtCharts::QBarSet("Transacted Money");
 
-        double amount = row[1].as<double>();
-        barSet->append(amount);
+        for (const auto &row: query_res) {
+            QString year = QString::fromStdString(row[0].c_str());
+            categories << year;
+
+            double amount = row[1].as<double>();
+            barSet->append(amount);
+        }
+
+        series = new QtCharts::QBarSeries();
+        series->append(barSet);
+
+        chart = new QtCharts::QChart();
+        chart->addSeries(series);
+        chart->setTitle("Transaction Statistics");
+
+        axisX = new QtCharts::QBarCategoryAxis();
+        axisX->append(categories);
+        axisX->setTitleText("Years");
+        chart->addAxis(axisX, Qt::AlignBottom);
+        series->attachAxis(axisX);
+
+        axisY = new QtCharts::QValueAxis();
+        axisY->setTitleText("Transacted Money");
+        chart->addAxis(axisY, Qt::AlignLeft);
+        series->attachAxis(axisY);
+
+        chartView = new QtCharts::QChartView(chart);
+        chartView->setRenderHint(QPainter::Antialiasing);
+        chartView->show();
     }
-
-    series = new QtCharts::QBarSeries();
-    series->append(barSet);
-
-    chart = new QtCharts::QChart();
-    chart->addSeries(series);
-    chart->setTitle("Transaction Statistics");
-
-    axisX = new QtCharts::QBarCategoryAxis();
-    axisX->append(categories);
-    axisX->setTitleText("Years");
-    chart->addAxis(axisX, Qt::AlignBottom);
-    series->attachAxis(axisX);
-
-    axisY = new QtCharts::QValueAxis();
-    axisY->setTitleText("Transacted Money");
-    chart->addAxis(axisY, Qt::AlignLeft);
-    series->attachAxis(axisY);
-
-    chartView = new QtCharts::QChartView(chart);
-    chartView->setRenderHint(QPainter::Antialiasing);
-    chartView->show();
+    catch (std::exception &ex) {
+        QMessageBox::critical(nullptr, "Error", ex.what(), QMessageBox::Ok);
+    }
 }
 
 void Transaction::onButtonClickedDeleted() {
-    pqxx::work w(ConnectionTool::GetConnect());
-    auto res_query = w.exec("DELETE FROM public.\"Transaction\";");
-    w.commit();
+    try {
+        pqxx::work w(ConnectionTool::GetConnect());
+        auto res_query = w.exec("DELETE FROM public.\"Transaction\";");
+        w.commit();
+    }
+    catch (std::exception &ex) {
+        QMessageBox::critical(nullptr, "Error", ex.what(), QMessageBox::Ok);
+    }
 }
 
 void Transaction::onButtonClickedDeletedOne() {
-    pqxx::work w(ConnectionTool::GetConnect());
-    int id = insert_transaction_line[0]->text().toInt();
-    w.exec_params("DELETE FROM public.\"Transaction\" WHERE id = $1", id);
-    w.commit();
-    for (int i = 0; i < 4; i++)
-        insert_transaction_line[i]->clear();
+    try {
+        pqxx::work w(ConnectionTool::GetConnect());
+        int id = insert_transaction_line[0]->text().toInt();
+        w.exec_params("DELETE FROM public.\"Transaction\" WHERE id = $1", id);
+        w.commit();
+        for (int i = 0; i < 4; i++)
+            insert_transaction_line[i]->clear();
+    }
+    catch (std::exception &ex) {
+        QMessageBox::critical(nullptr, "Error", ex.what(), QMessageBox::Ok);
+    }
 }
-

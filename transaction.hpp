@@ -3,6 +3,9 @@
 
 #include <QPushButton>
 #include <QValueAxis>
+#include <QMessageBox>
+#include <QException>
+#include <QFont>
 #include <QMainWindow>
 #include <QLineEdit>
 #include <QtWidgets/QApplication>

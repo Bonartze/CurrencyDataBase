@@ -3,7 +3,9 @@
 #define UNTITLED87_STOCKMARKET_HPP
 
 #include <QMainWindow>
+#include <QException>
 #include <QPushButton>
+#include <QMessageBox>
 #include <QLineEdit>
 #include <QtCharts/QChartView>
 #include <QtCharts/QScatterSeries>

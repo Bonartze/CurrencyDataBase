@@ -2,6 +2,7 @@
 #ifndef UNTITLED87_INSERTACCOUNT_HPP
 #define UNTITLED87_INSERTACCOUNT_HPP
 
+#include <QMessageBox>
 #include <QWidget>
 #include <QWidget>
 #include <QPushButton>
@@ -10,6 +11,7 @@
 #include <QChartView>
 #include <QPieSeries>
 #include <QMainWindow>
+#include <exception>
 
 #include "ConnectionTool.hpp"
 

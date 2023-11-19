@@ -1,11 +1,3 @@
-/********************************************************************************
-** Form generated from reading UI file 'insertaccount.ui'
-**
-** Created by: Qt User Interface Compiler version 5.15.3
-**
-** WARNING! All changes made in this file will be lost when recompiling UI file!
-********************************************************************************/
-
 #ifndef UI_INSERTACCOUNT_H
 #define UI_INSERTACCOUNT_H
 
@@ -15,12 +7,10 @@
 
 QT_BEGIN_NAMESPACE
 
-class Ui_InsertAccount
-{
+class Ui_InsertAccount {
 public:
 
-    void setupUi(QWidget *InsertAccount)
-    {
+    void setupUi(QWidget *InsertAccount) {
         if (InsertAccount->objectName().isEmpty())
             InsertAccount->setObjectName(QString::fromUtf8("InsertAccount"));
         InsertAccount->resize(400, 300);
@@ -28,19 +18,19 @@ public:
         retranslateUi(InsertAccount);
 
         QMetaObject::connectSlotsByName(InsertAccount);
-    } // setupUi
+    }
 
-    void retranslateUi(QWidget *InsertAccount)
-    {
+    void retranslateUi(QWidget *InsertAccount) {
         InsertAccount->setWindowTitle(QCoreApplication::translate("InsertAccount", "InsertAccount", nullptr));
-    } // retranslateUi
+    }
 
 };
 
 namespace Ui {
-    class InsertAccount: public Ui_InsertAccount {};
-} // namespace Ui
+    class InsertAccount : public Ui_InsertAccount {
+    };
+}
 
 QT_END_NAMESPACE
 
-#endif // UI_INSERTACCOUNT_H
+#endif
