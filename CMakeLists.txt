@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.26)
+cmake_minimum_required(VERSION 3.22.1)
 project(untitled87)
 find_package(Boost)
 if (Boost_FOUND)
