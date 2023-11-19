@@ -12,6 +12,8 @@
 #include <QBarCategoryAxis>
 #include <QBarSeries>
 #include <QBarSet>
+#include <QVBoxLayout>
+#include <QLabel>
 #include "ConnectionTool.hpp"
 
 QT_BEGIN_NAMESPACE
@@ -39,16 +41,21 @@ private slots:
 private:
     std::vector<QLineEdit *> insert_stock_market_line;
     Ui::StockMarket *ui;
-    QPushButton *insert_into_stock_market;
-    QPushButton *income_currency;
-    QPushButton *delete_table;
-    QPushButton *delete_one;
+
+    std::vector<QPushButton *> buttons;
+    std::vector<QLabel *> labels;
+
     QtCharts::QBarSet *barSet;
-    QtCharts::QBarSeries *series;
     QtCharts::QChart *chart;
     QtCharts::QBarCategoryAxis *axisX;
     QtCharts::QChartView *chartView;
     QtCharts::QValueAxis *axisY;
+
+
+    QHBoxLayout *layout_;
+    QVBoxLayout *vl_;
+    QLabel *label_;
+    QWidget *centralWidget;
 };
 
 

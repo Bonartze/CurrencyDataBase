@@ -7,37 +7,60 @@
 StockMarket::StockMarket(QWidget *parent) :
         QMainWindow(parent), ui(new Ui::StockMarket) {
     ui->setupUi(this);
-    insert_into_stock_market = new QPushButton("Insert data", this);
-    income_currency = new QPushButton("Get statistics of currency's sales", this);
-    delete_table = new QPushButton("Clear the table", this);
-    delete_one = new QPushButton("Delete note from the table", this);
+    buttons.resize(4);
+    insert_stock_market_line.resize(5);
+    labels.resize(5);
 
-    insert_into_stock_market->setFixedSize(200, 30);
-    income_currency->setFixedSize(200, 30);
-    delete_table->setFixedSize(200, 30);
-    delete_one->setFixedSize(200, 30);
+    buttons[0] = new QPushButton("Insert data", this);
+    buttons[1] = new QPushButton("Get statistics of currency's sales", this);
+    buttons[2] = new QPushButton("Clear the table", this);
+    buttons[3] = new QPushButton("Delete note from the table", this);
 
+    for (int i = 0; i < 4; i++) {
+        buttons[i]->setFixedSize(300, 200);
+        buttons[i]->move(100, 10 + 50 * i);
+        buttons[i]->setStyleSheet("background-color: blue;");
+    }
 
-    insert_into_stock_market->move(10, 100);
-    income_currency->move(10, 150);
-    delete_table->move(10, 200);
-    delete_one->move(10, 250);
+    connect(buttons[0], SIGNAL(clicked()), this, SLOT(onButtonClicked()));
+    connect(buttons[1], SIGNAL(clicked()), this, SLOT(onButtonClickedIncomeCurrency()));
+    connect(buttons[2], SIGNAL(clicked()), this, SLOT(onButtonClickedDeleted()));
+    connect(buttons[3], SIGNAL(clicked()), this, SLOT(onButtonClickedDeletedOne()));
+    layout_ = new QHBoxLayout();
+    for (int i = 0; i < 4; i++)
+        layout_->addWidget(buttons[i]);
 
-    insert_into_stock_market->show();
-    income_currency->show();
-    delete_table->show();
-    delete_one->show();
+    layout_->setAlignment(Qt::AlignCenter);
+    layout_->setSpacing(20);
+    QPixmap img("currency.jpg");
+    img = img.scaled(500, 500);
+    label_ = new QLabel(this);
+    label_->setPixmap(img);
+    label_->setAlignment(Qt::AlignCenter);
+    vl_ = new QVBoxLayout();
+    vl_->addWidget(label_);
+    vl_->addLayout(layout_);
+    centralWidget = new QWidget();
+    centralWidget->setLayout(vl_);
 
-    connect(insert_into_stock_market, SIGNAL(clicked()), this, SLOT(onButtonClicked()));
-    connect(income_currency, SIGNAL(clicked()), this, SLOT(onButtonClickedIncomeCurrency()));
-    connect(delete_table, SIGNAL(clicked()), this, SLOT(onButtonClickedDeleted()));
-    connect(delete_one, SIGNAL(clicked()), this, SLOT(onButtonClickedDeletedOne()));
-
+    setCentralWidget(centralWidget);
 
     insert_stock_market_line.resize(5);
     for (int i = 0; i < 5; i++) {
         insert_stock_market_line[i] = new QLineEdit(this);
-        insert_stock_market_line[i]->setGeometry(30 * i, 40, 30, 40);
+        insert_stock_market_line[i]->move(150, 10 + 50 * i);
+        insert_stock_market_line[i]->setFixedWidth(200);
+    }
+
+    labels[0] = new QLabel("Stock id: ", this);
+    labels[1] = new QLabel("Currency-i id: ", this);
+    labels[2] = new QLabel("Currency-o id: ", this);
+    labels[3] = new QLabel("Rate: ", this);
+    labels[4] = new QLabel("Date (year): ", this);
+
+    for (int i = 0; i < 5; i++) {
+        labels[i]->move(5, 10 + 50 * i);
+        labels[i]->show();
     }
 }
 

@@ -3,11 +3,13 @@
 #define UNTITLED87_INSERTACCOUNT_HPP
 
 #include <QWidget>
+#include <QWidget>
 #include <QPushButton>
 #include <QLineEdit>
 #include <QtCharts>
 #include <QChartView>
 #include <QPieSeries>
+#include <QMainWindow>
 
 #include "ConnectionTool.hpp"
 
@@ -15,7 +17,7 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class InsertAccount; }
 QT_END_NAMESPACE
 
-class InsertAccount : public QWidget {
+class InsertAccount : public QMainWindow {
 Q_OBJECT
 public:
     explicit InsertAccount(QWidget *parent = nullptr);
@@ -37,15 +39,20 @@ private slots:
 private:
     std::vector<QLineEdit *> insert_line;
     Ui::InsertAccount *ui;
-    QPushButton *bank_usage;
-    QPushButton *stock_market_usage;
-    QPushButton *insert_into_account;
-    QPushButton *delete_table;
-    QPushButton *delete_one;
+
+    std::vector<QPushButton *> buttons;
+
     std::vector<QPieSeries *> series;
     std::vector<QPieSlice *> slice;
     std::vector<QChart *> chart;
     std::vector<QChartView *> chartview;
+
+    std::vector<QLabel *> labels;
+
+    QHBoxLayout *layout_;
+    QVBoxLayout *vl_;
+    QLabel *label_;
+    QWidget *centralWidget;
 };
 
 #endif

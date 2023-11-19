@@ -4,36 +4,57 @@
 
 InsertBank::InsertBank(QWidget *parent) : QMainWindow(parent), ui(new Ui::InsertBank) {
     ui->setupUi(this);
+    labels.resize(2);
+    buttons.resize(4);
 
-    bank_chart = new QPushButton("Display bank usage statistics", this);
-    delete_table = new QPushButton("Clear the table", this);
-    insert_in_bank = new QPushButton("Insert data", this);
-    delete_one = new QPushButton("Delete note from the table", this);
+    labels[0] = new QLabel("Bank id: ", this);
+    labels[1] = new QLabel("Name: ", this);
+    for (int i = 0; i < 2; i++) {
+        labels[i]->move(10, 10 + 50 * i);
+        labels[i]->show();
+    }
 
-    bank_chart->setFixedSize(200, 30);
-    delete_table->setFixedSize(200, 30);
-    insert_in_bank->setFixedSize(200, 30);
-    delete_one->setFixedSize(200, 30);
+    buttons[0] = new QPushButton("Display bank usage statistics", this);
+    buttons[1] = new QPushButton("Clear the table", this);
+    buttons[2] = new QPushButton("Insert data", this);
+    buttons[3] = new QPushButton("Delete note from the table", this);
 
-    bank_chart->move(10, 100);
-    delete_table->move(10, 150);
-    insert_in_bank->move(10, 200);
-    delete_one->move(10, 250);
+    for (int i = 0; i < 4; i++) {
+        buttons[i]->setFixedSize(300, 200);
+        buttons[i]->setStyleSheet("background-color: blue;");
 
-    bank_chart->show();
-    delete_table->show();
-    insert_in_bank->show();
-    delete_one->show();
+    }
 
-    connect(insert_in_bank, SIGNAL(clicked()), this, SLOT(onButtonClicked()));
-    connect(bank_chart, SIGNAL(clicked()), this, SLOT(onButtonCLickedChart()));
-    connect(delete_table, SIGNAL(clicked()), this, SLOT(onButtonClickedDeleted()));
-    connect(delete_one, SIGNAL(clicked()), this, SLOT(onButtonClickedDeletedOne()));
+    connect(buttons[2], SIGNAL(clicked()), this, SLOT(onButtonClicked()));
+    connect(buttons[0], SIGNAL(clicked()), this, SLOT(onButtonCLickedChart()));
+    connect(buttons[1], SIGNAL(clicked()), this, SLOT(onButtonClickedDeleted()));
+    connect(buttons[3], SIGNAL(clicked()), this, SLOT(onButtonClickedDeletedOne()));
 
     insert_line_bank.resize(2);
+
+
+    layout_ = new QHBoxLayout();
+    for (int i = 0; i < 4; i++)
+        layout_->addWidget(buttons[i]);
+
+    layout_->setAlignment(Qt::AlignCenter);
+    layout_->setSpacing(20);
+    QPixmap img("bank.jpg");
+    img = img.scaled(500, 500);
+    label_ = new QLabel(this);
+    label_->setPixmap(img);
+    label_->setAlignment(Qt::AlignCenter);
+    vl_ = new QVBoxLayout();
+    vl_->addWidget(label_);
+    vl_->addLayout(layout_);
+    centralWidget = new QWidget();
+    centralWidget->setLayout(vl_);
+
+    setCentralWidget(centralWidget);
     for (int i = 0; i < 2; i++) {
         insert_line_bank[i] = new QLineEdit(this);
-        insert_line_bank[i]->setGeometry(30 * i, 40, 30, 40);
+        insert_line_bank[i]->move(100, 10 + 50 * i);
+        insert_line_bank[i]->setFixedWidth(200);
     }
 }
 

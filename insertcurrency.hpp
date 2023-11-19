@@ -8,13 +8,14 @@
 #include <QtCharts>
 #include <QChartView>
 #include <QPieSeries>
+#include <QMainWindow>
 #include "ConnectionTool.hpp"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class InsertCurrency; }
 QT_END_NAMESPACE
 
-class InsertCurrency : public QWidget {
+class InsertCurrency : public QMainWindow {
 Q_OBJECT
 
 public:
@@ -38,14 +39,20 @@ private:
     QPieSlice *slice;
     QChart *chart;
     QChartView *chartview;
+
     std::vector<QLineEdit *> insert_currency_line;
     Ui::InsertCurrency *ui;
-    QPushButton *insert_into_currency;
-    QPushButton *delete_table;
-    QPushButton *delete_one;
-    QPushButton *currency_chart;
+
+    std::vector<QPushButton *> buttons;
+
+    std::vector<QLabel *> labels;
+
+    QHBoxLayout *layout_;
+    QVBoxLayout *vl_;
+    QLabel *label_;
+    QWidget *centralWidget;
 
 };
 
 
-#endif //UNTITLED87_INSERTCURRENCY_HPP
+#endif

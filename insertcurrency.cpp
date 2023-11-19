@@ -4,39 +4,58 @@
 
 
 InsertCurrency::InsertCurrency(QWidget *parent) :
-        QWidget(parent), ui(new Ui::InsertCurrency) {
-    ui->setupUi(this);
-    insert_into_currency = new QPushButton("Insert data", this);
-    delete_table = new QPushButton("Clear the table", this);
-    delete_one = new QPushButton("Delete note from the table", this);
-    currency_chart = new QPushButton("Display currency popularity statistics", this);
+        QMainWindow(parent), ui(new Ui::InsertCurrency) {
 
-
-    currency_chart->setFixedSize(200, 30);
-    delete_table->setFixedSize(200, 30);
-    insert_into_currency->setFixedSize(200, 30);
-    delete_one->setFixedSize(200, 30);
-
-    currency_chart->move(10, 100);
-    delete_table->move(10, 150);
-    insert_into_currency->move(10, 200);
-    delete_one->move(10, 250);
-
-    delete_one->show();
-    delete_table->show();
-    currency_chart->show();
-    insert_into_currency->show();
-
-    connect(insert_into_currency, SIGNAL(clicked()), this, SLOT(onButtonClicked()));
-    connect(currency_chart, SIGNAL(clicked()), this, SLOT(onButtonCLickedChart()));
-    connect(delete_table, SIGNAL(clicked()), this, SLOT(onButtonClickedDeleted()));
-    connect(delete_one, SIGNAL(clicked()), this, SLOT(onButtonClickedDeletedOne()));
-
-
+    buttons.resize(4);
     insert_currency_line.resize(2);
+    labels.resize(2);
+
+    ui->setupUi(this);
+    buttons[0] = new QPushButton("Insert data", this);
+    buttons[1] = new QPushButton("Clear the table", this);
+    buttons[2] = new QPushButton("Delete note from the table", this);
+    buttons[3] = new QPushButton("Display currency popularity statistics", this);
+
+    for (int i = 0; i < 4; i++) {
+        buttons[i]->setFixedSize(300, 200);
+        buttons[i]->setStyleSheet("background-color: blue;");
+    }
+
+    labels[0] = new QLabel("Currency id: ", this);
+    labels[1] = new QLabel("Name: ", this);
+    for (int i = 0; i < 2; i++) {
+        labels[i]->move(10, 10 + 50 * i);
+        labels[i]->show();
+    }
+
+    connect(buttons[0], SIGNAL(clicked()), this, SLOT(onButtonClicked()));
+    connect(buttons[3], SIGNAL(clicked()), this, SLOT(onButtonCLickedChart()));
+    connect(buttons[1], SIGNAL(clicked()), this, SLOT(onButtonClickedDeleted()));
+    connect(buttons[2], SIGNAL(clicked()), this, SLOT(onButtonClickedDeletedOne()));
+
+    layout_ = new QHBoxLayout();
+    for (int i = 0; i < 4; i++) {
+        layout_->addWidget(buttons[i]);
+    }
+
+    layout_->setAlignment(Qt::AlignCenter);
+    layout_->setSpacing(20);
+    QPixmap img("account.jpg");
+    img = img.scaled(400, 400);
+    label_ = new QLabel(this);
+    label_->setPixmap(img);
+    label_->setAlignment(Qt::AlignCenter);
+    vl_ = new QVBoxLayout();
+    vl_->addWidget(label_);
+    vl_->addLayout(layout_);
+    centralWidget = new QWidget();
+    centralWidget->setLayout(vl_);
+
+    setCentralWidget(centralWidget);
     for (int i = 0; i < 2; i++) {
         insert_currency_line[i] = new QLineEdit(this);
-        insert_currency_line[i]->setGeometry(30 * i, 40, 30, 40);
+        insert_currency_line[i]->move(100, 10 + 50 * i);
+        insert_currency_line[i]->setFixedWidth(200);
     }
 }
 

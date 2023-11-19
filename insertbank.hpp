@@ -8,6 +8,7 @@
 #include <QtCharts>
 #include <QChartView>
 #include <QPieSeries>
+
 #include "ConnectionTool.hpp"
 
 QT_BEGIN_NAMESPACE
@@ -37,12 +38,17 @@ private:
     QPieSlice *slice;
     QChart *chart;
     QChartView *chartview;
+
     std::vector<QLineEdit *> insert_line_bank;
+    std::vector<QPushButton *> buttons;
     Ui::InsertBank *ui;
-    QPushButton *bank_chart;
-    QPushButton *insert_in_bank;
-    QPushButton *delete_table;
-    QPushButton *delete_one;
+
+    std::vector<QLabel *> labels;
+
+    QHBoxLayout *layout_;
+    QVBoxLayout *vl_;
+    QLabel *label_;
+    QWidget *centralWidget;
 };
 
 

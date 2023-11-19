@@ -1,14 +1,17 @@
 #ifndef UNTITLED87_TRANSACTION_HPP
 #define UNTITLED87_TRANSACTION_HPP
 
-#include <QWidget>
 #include <QPushButton>
+#include <QValueAxis>
+#include <QMainWindow>
 #include <QLineEdit>
 #include <QtWidgets/QApplication>
 #include <QtCharts/QChartView>
 #include <QtCharts/QBarSeries>
 #include <QtCharts/QBarSet>
 #include <QtCharts/QBarCategoryAxis>
+#include <QHBoxLayout>
+#include <QLabel>
 
 #include "ConnectionTool.hpp"
 
@@ -16,7 +19,7 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class Transaction; }
 QT_END_NAMESPACE
 
-class Transaction : public QWidget {
+class Transaction : public QMainWindow {
 Q_OBJECT
 
 public:
@@ -43,12 +46,18 @@ private:
     QtCharts::QBarCategoryAxis *axisX;
     QtCharts::QChartView *chartView;
     QtCharts::QValueAxis *axisY;
+
     std::vector<QLineEdit *> insert_transaction_line;
-    QPushButton *transaction_statistics;
-    QPushButton *insert_into_transaction;
-    QPushButton *delete_table;
-    QPushButton *delete_one;
+    std::vector<QPushButton *> buttons;
+    std::vector<QLabel *> labels;
+
+    QHBoxLayout *layout_;
+    QVBoxLayout *vl_;
+    QLabel *label_;
+    QWidget *centralWidget;
+
     Ui::Transaction *ui;
+
 };
 
 

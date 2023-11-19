@@ -1,5 +1,3 @@
-
-
 #ifndef UNTITLED87_MAINWINDOW_HPP
 #define UNTITLED87_MAINWINDOW_HPP
 
@@ -41,9 +39,11 @@ private slots:
     void onButtonClicked4();
 
 private:
+    QVBoxLayout *vl;
+    QHBoxLayout *layout;
+    QLabel *label;
     Ui::MainWindow *ui;
     std::vector<QWidget *> windows_for_insert;
     std::vector<QPushButton *> insert_buttons;
 };
-
-#endif //UNTITLED87_MAINWINDOW_HPP
+#endif

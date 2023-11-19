@@ -12,11 +12,13 @@ MainWindow::MainWindow(QWidget *parent) : QWidget(parent), ui(new Ui::MainWindow
     }
 
     ui->setupUi(this);
+
+
     insert_buttons.resize(5);
     windows_for_insert.resize(5);
     windows_for_insert[0] = new InsertBank();
     windows_for_insert[1] = new InsertAccount();
-    windows_for_insert[2] = new InsertCurrency;
+    windows_for_insert[2] = new InsertCurrency();
     windows_for_insert[3] = new StockMarket();
     windows_for_insert[4] = new Transaction();
 
@@ -26,11 +28,28 @@ MainWindow::MainWindow(QWidget *parent) : QWidget(parent), ui(new Ui::MainWindow
     insert_buttons[3] = new QPushButton("Manage table \"StockMarket\"", this);
     insert_buttons[4] = new QPushButton("Manage table \"Transaction\"", this);
 
-    insert_buttons[0]->setGeometry(10, 10, 400, 30);
-    insert_buttons[1]->setGeometry(10, 50, 400, 30);
-    insert_buttons[2]->setGeometry(10, 90, 400, 30);
-    insert_buttons[3]->setGeometry(10, 130, 400, 30);
-    insert_buttons[4]->setGeometry(10, 170, 400, 30);
+    for (int i = 0; i < 5; i++) {
+        insert_buttons[i]->setFixedSize(300, 200);
+        insert_buttons[i]->setStyleSheet("background-color: blue;");
+    }
+
+    vl = new QVBoxLayout(this);
+    QPixmap img("menu.jpg");
+    img = img.scaledToWidth(1825);
+    label = new QLabel(this);
+    label->setPixmap(img);
+
+    layout = new QHBoxLayout(this);
+    layout->setSpacing(20);
+    for (int i = 0; i < 5; i++)
+        layout->addWidget(insert_buttons[i]);
+
+    layout->setAlignment(Qt::AlignCenter);
+
+    vl->addWidget(label, 0, Qt::AlignCenter);
+    vl->addLayout(layout);
+
+
 
     connect(insert_buttons[0], SIGNAL(clicked()), this, SLOT(onButtonClicked0()));
     connect(insert_buttons[1], SIGNAL(clicked()), this, SLOT(onButtonClicked1()));
@@ -54,6 +73,7 @@ void MainWindow::onButtonClicked1() {
 void MainWindow::onButtonClicked2() {
     windows_for_insert[2]->show();
 }
+
 
 void MainWindow::onButtonClicked3() {
     windows_for_insert[3]->show();

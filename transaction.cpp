@@ -1,43 +1,64 @@
 
 
-#include <QValueAxis>
 #include "transaction.hpp"
 #include "ui_Transaction.h"
 
-
 Transaction::Transaction(QWidget *parent) :
-        QWidget(parent), ui(new Ui::Transaction) {
+        QMainWindow(parent), ui(new Ui::Transaction) {
     ui->setupUi(this);
-    insert_into_transaction = new QPushButton("Insert data", this);
-    transaction_statistics = new QPushButton("Get transaction statistics", this);
-    delete_table = new QPushButton("Clear the table", this);
-    delete_one = new QPushButton("Delete note from the table", this);
-
-
-    insert_into_transaction->setFixedSize(200, 30);
-    transaction_statistics->setFixedSize(200, 30);
-    delete_table->setFixedSize(200, 30);
-    delete_one->setFixedSize(200, 30);
-
-
-    insert_into_transaction->move(10, 100);
-    transaction_statistics->move(10, 150);
-    delete_one->move(10, 200);
-    delete_table->move(10, 250);
-
-    insert_into_transaction->show();
-    transaction_statistics->show();
-    delete_one->show();
-    delete_table->show();
-
-
-    connect(insert_into_transaction, SIGNAL(clicked()), this, SLOT(onButtonClicked()));
-    connect(transaction_statistics, SIGNAL(clicked()), this, SLOT(onButtonClickedTransactionStatistics()));
-
+    buttons.resize(4);
     insert_transaction_line.resize(4);
+    labels.resize(4);
+
+    labels[0] = new QLabel("Transaction id: ", this);
+    labels[1] = new QLabel("Account id-i: ", this);
+    labels[2] = new QLabel("Amount: ", this);
+    labels[3] = new QLabel("Date (year): ", this);
+
+    for (int i = 0; i < 4; i++) {
+        labels[i]->move(2, 10 + 50 * i);
+        labels[i]->show();
+    }
+
+    buttons[0] = new QPushButton("Insert data", this);
+    buttons[1] = new QPushButton("Get transaction statistics", this);
+    buttons[2] = new QPushButton("Clear the table", this);
+    buttons[3] = new QPushButton("Delete note from the table", this);
+
+
+    connect(buttons[0], SIGNAL(clicked()), this, SLOT(onButtonClicked()));
+    connect(buttons[1], SIGNAL(clicked()), this, SLOT(onButtonClickedTransactionStatistics()));
+    connect(buttons[2], SIGNAL(clicked()), this, SLOT(onButtonClickedDeleted()));
+    connect(buttons[3], SIGNAL(clicked()), this, SLOT(onButtonClickedDeletedOne()));
+
+    for (int i = 0; i < 4; i++) {
+        buttons[i]->setFixedSize(300, 200);
+        buttons[i]->setStyleSheet("background-color: blue;");
+
+    }
+    layout_ = new QHBoxLayout();
+    for (int i = 0; i < 4; i++)
+        layout_->addWidget(buttons[i]);
+
+    layout_->setAlignment(Qt::AlignCenter);
+    layout_->setSpacing(20);
+    QPixmap img("transaction.jpg");
+    img = img.scaled(500, 500);
+    label_ = new QLabel(this);
+    label_->setPixmap(img);
+    label_->setAlignment(Qt::AlignCenter);
+    vl_ = new QVBoxLayout();
+    vl_->addWidget(label_);
+    vl_->addLayout(layout_);
+    centralWidget = new QWidget();
+    centralWidget->setLayout(vl_);
+    setCentralWidget(centralWidget);
+
+
     for (int i = 0; i < 4; i++) {
         insert_transaction_line[i] = new QLineEdit(this);
-        insert_transaction_line[i]->setGeometry(30 * i, 40, 30, 40);
+        insert_transaction_line[i]->move(100, 10 + 50 * i);
+        insert_transaction_line[i]->setFixedWidth(200);
     }
 }
 

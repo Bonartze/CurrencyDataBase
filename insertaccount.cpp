@@ -2,49 +2,67 @@
 #include "insertaccount.hpp"
 #include "ui_InsertAccount.h"
 
-
-InsertAccount::InsertAccount(QWidget *parent) :
-        QWidget(parent), ui(new Ui::InsertAccount) {
+InsertAccount::InsertAccount(QWidget *parent) : QMainWindow(parent), ui(new Ui::InsertAccount) {
     ui->setupUi(this);
+    insert_line.resize(4);
+    buttons.resize(5);
+    labels.resize(4);
+    series.resize(2);
     slice.resize(2);
     chart.resize(2);
-    series.resize(2);
     chartview.resize(2);
 
-    insert_into_account = new QPushButton("Insert data", this);
-    bank_usage = new QPushButton("Bank usage statistics", this);
-    stock_market_usage = new QPushButton("Stock market usage", this);
-    delete_one = new QPushButton("Delete note from the table", this);
-    delete_table = new QPushButton("Clear the table", this);
 
-    insert_into_account->setFixedSize(200, 30);
-    bank_usage->setFixedSize(200, 30);
-    stock_market_usage->setFixedSize(200, 30);
-    delete_one->setFixedSize(200, 30);
-    delete_table->setFixedSize(200, 30);
+    labels[0] = new QLabel("Account id: ", this);
+    labels[1] = new QLabel("Balance: ", this);
+    labels[2] = new QLabel("Bank id: ", this);
+    labels[3] = new QLabel("Market id: ", this);
 
-    insert_into_account->move(10, 100);
-    stock_market_usage->move(10, 200);
-    bank_usage->move(10, 150);
-    delete_one->move(10, 250);
-    delete_table->move(10, 300);
+    for (int i = 0; i < 4; i++) {
+        labels[i]->move(10, 10 + 50 * i);
+        labels[i]->show();
+    }
 
-    insert_into_account->show();
-    bank_usage->show();
-    stock_market_usage->show();
-    delete_one->show();
-    delete_table->show();
+    buttons[0] = new QPushButton("Insert data", this);
+    buttons[1] = new QPushButton("Bank usage statistics", this);
+    buttons[2] = new QPushButton("Stock market usage", this);
+    buttons[3] = new QPushButton("Delete note from the table", this);
+    buttons[4] = new QPushButton("Clear the table", this);
 
-    connect(insert_into_account, SIGNAL(clicked()), this, SLOT(onButtonClicked()));
-    connect(stock_market_usage, SIGNAL(clicked()), this, SLOT(onButtonClickedStockMarketUsage()));
-    connect(bank_usage, SIGNAL(clicked()), this, SLOT(onButtonClickedBalanceChangeEachYear()));
-    connect(delete_one, SIGNAL(clicked()), this, SLOT(onButtonClickedDeletedOne()));
-    connect(delete_table, SIGNAL(clicked()), this, SLOT(onButtonClickedDeleted()));
 
-    insert_line.resize(4);
+    connect(buttons[0], SIGNAL(clicked()), this, SLOT(onButtonClicked()));
+    connect(buttons[2], SIGNAL(clicked()), this, SLOT(onButtonClickedStockMarketUsage()));
+    connect(buttons[1], SIGNAL(clicked()), this, SLOT(onButtonClickedBalanceChangeEachYear()));
+    connect(buttons[3], SIGNAL(clicked()), this, SLOT(onButtonClickedDeletedOne()));
+    connect(buttons[4], SIGNAL(clicked()), this, SLOT(onButtonClickedDeleted()));
+
+    for (int i = 0; i < 5; i++) {
+        buttons[i]->setFixedSize(300, 200);
+        buttons[i]->setStyleSheet("background-color: blue;");
+    }
+
+    layout_ = new QHBoxLayout();
+    for (int i = 0; i < 5; i++)
+        layout_->addWidget(buttons[i]);
+
+    layout_->setAlignment(Qt::AlignCenter);
+    layout_->setSpacing(20);
+    QPixmap img("account.jpg");
+    img = img.scaled(500, 500);
+    label_ = new QLabel(this);
+    label_->setPixmap(img);
+    label_->setAlignment(Qt::AlignCenter);
+    vl_ = new QVBoxLayout();
+    vl_->addWidget(label_);
+    vl_->addLayout(layout_);
+    centralWidget = new QWidget();
+    centralWidget->setLayout(vl_);
+
+    setCentralWidget(centralWidget);
     for (int i = 0; i < 4; i++) {
         insert_line[i] = new QLineEdit(this);
-        insert_line[i]->setGeometry(30 * i, 40, 30, 40);
+        insert_line[i]->move(100, 10 + 50 * i);
+        insert_line[i]->setFixedWidth(200);
     }
 }
 
