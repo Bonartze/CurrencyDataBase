@@ -67,6 +67,11 @@ InsertAccount::InsertAccount(QWidget *parent) : QMainWindow(parent), ui(new Ui::
         insert_line[i]->move(100, 10 + 50 * i);
         insert_line[i]->setFixedWidth(200);
     }
+    insert_line[0]->setPlaceholderText("123");
+    insert_line[1]->setPlaceholderText("1234.5");
+    insert_line[2]->setPlaceholderText("4");
+    insert_line[3]->setPlaceholderText("2");
+
 }
 
 InsertAccount::~InsertAccount() {

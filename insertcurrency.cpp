@@ -59,7 +59,11 @@ InsertCurrency::InsertCurrency(QWidget *parent) :
         insert_currency_line[i]->move(100, 10 + 50 * i);
         insert_currency_line[i]->setFixedWidth(200);
     }
+    insert_currency_line[0]->setPlaceholderText("43");
+    insert_currency_line[1]->setPlaceholderText("WorldCoin");
+
 }
+
 
 InsertCurrency::~InsertCurrency() {
     delete ui;

@@ -1,9 +1,9 @@
 CMakeFiles/untitled87.dir/insertaccount.cpp.o: \
- /home/ivan/CLionProjects/untitled87/insertaccount.cpp \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/insertaccount.cpp \
  /usr/include/stdc-predef.h \
- /home/ivan/CLionProjects/untitled87/insertaccount.hpp \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/insertaccount.hpp \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMessageBox \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmessagebox.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtguiglobal.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h \
@@ -128,6 +128,8 @@ CMakeFiles/untitled87.dir/insertaccount.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qversiontagging.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtgui-config.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h \
@@ -276,11 +278,12 @@ CMakeFiles/untitled87.dir/insertaccount.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qcursor.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLineEdit \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlineedit.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \
@@ -757,7 +760,6 @@ CMakeFiles/untitled87.dir/insertaccount.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcalendarwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcheckbox.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcolordialog.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcolormap.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcolumnview.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h \
@@ -836,7 +838,6 @@ CMakeFiles/untitled87.dir/insertaccount.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmenu.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmenubar.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmenu.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmessagebox.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmouseeventtransition.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qopenglwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
@@ -984,7 +985,7 @@ CMakeFiles/untitled87.dir/insertaccount.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCharts/QChartView \
  /usr/include/x86_64-linux-gnu/qt5/QtCharts/QPieSeries \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
- /home/ivan/CLionProjects/untitled87/ConnectionTool.hpp \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/ConnectionTool.hpp \
  /usr/include/pqxx/pqxx /usr/include/pqxx/array \
  /usr/include/pqxx/array.hxx /usr/include/pqxx/compiler-public.hxx \
  /usr/include/pqxx/config-public-compiler.h /usr/include/c++/11/ciso646 \
@@ -1037,5 +1038,5 @@ CMakeFiles/untitled87.dir/insertaccount.cpp.o: \
  /usr/include/pqxx/subtransaction /usr/include/pqxx/subtransaction.hxx \
  /usr/include/pqxx/transaction /usr/include/pqxx/transaction.hxx \
  /usr/include/pqxx/transactor /usr/include/pqxx/transactor.hxx \
- /home/ivan/CLionProjects/untitled87/ui_InsertAccount.h \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/ui_InsertAccount.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication

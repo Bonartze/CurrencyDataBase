@@ -53,6 +53,13 @@ StockMarket::StockMarket(QWidget *parent) :
         insert_stock_market_line[i]->setFixedWidth(200);
     }
 
+    insert_stock_market_line[0]->setPlaceholderText("43");
+    insert_stock_market_line[1]->setPlaceholderText("12");
+    insert_stock_market_line[2]->setPlaceholderText("13");
+    insert_stock_market_line[3]->setPlaceholderText("43.4");
+    insert_stock_market_line[4]->setPlaceholderText("1973");
+
+
     labels[0] = new QLabel("Stock id: ", this);
     labels[1] = new QLabel("Currency-i id: ", this);
     labels[2] = new QLabel("Currency-o id: ", this);

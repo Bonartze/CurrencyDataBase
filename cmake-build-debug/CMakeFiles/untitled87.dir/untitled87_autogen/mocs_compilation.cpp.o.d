@@ -1,7 +1,7 @@
 CMakeFiles/untitled87.dir/untitled87_autogen/mocs_compilation.cpp.o: \
- /home/ivan/CLionProjects/untitled87/cmake-build-debug/untitled87_autogen/mocs_compilation.cpp \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/cmake-build-debug/untitled87_autogen/mocs_compilation.cpp \
  /usr/include/stdc-predef.h \
- /home/ivan/CLionProjects/untitled87/cmake-build-debug/untitled87_autogen/EWIEGA46WW/moc_insertaccount.cpp \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/cmake-build-debug/untitled87_autogen/EWIEGA46WW/moc_insertaccount.cpp \
  /usr/include/c++/11/memory /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -117,9 +117,9 @@ CMakeFiles/untitled87.dir/untitled87_autogen/mocs_compilation.cpp.o: \
  /usr/include/c++/11/backward/auto_ptr.h \
  /usr/include/c++/11/pstl/glue_memory_defs.h \
  /usr/include/c++/11/pstl/execution_defs.h \
- /home/ivan/CLionProjects/untitled87/cmake-build-debug/untitled87_autogen/EWIEGA46WW/../../../insertaccount.hpp \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/cmake-build-debug/untitled87_autogen/EWIEGA46WW/../../../insertaccount.hpp \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMessageBox \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmessagebox.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtguiglobal.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h \
@@ -169,6 +169,8 @@ CMakeFiles/untitled87.dir/untitled87_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qversiontagging.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtgui-config.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h \
@@ -278,11 +280,12 @@ CMakeFiles/untitled87.dir/untitled87_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qcursor.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLineEdit \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlineedit.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \
@@ -759,7 +762,6 @@ CMakeFiles/untitled87.dir/untitled87_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcalendarwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcheckbox.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcolordialog.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcolormap.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcolumnview.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h \
@@ -838,7 +840,6 @@ CMakeFiles/untitled87.dir/untitled87_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmenu.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmenubar.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmenu.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmessagebox.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmouseeventtransition.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qopenglwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
@@ -986,7 +987,7 @@ CMakeFiles/untitled87.dir/untitled87_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCharts/QChartView \
  /usr/include/x86_64-linux-gnu/qt5/QtCharts/QPieSeries \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
- /home/ivan/CLionProjects/untitled87/cmake-build-debug/untitled87_autogen/EWIEGA46WW/../../../ConnectionTool.hpp \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/cmake-build-debug/untitled87_autogen/EWIEGA46WW/../../../ConnectionTool.hpp \
  /usr/include/pqxx/pqxx /usr/include/pqxx/array \
  /usr/include/pqxx/array.hxx /usr/include/pqxx/compiler-public.hxx \
  /usr/include/pqxx/config-public-compiler.h /usr/include/c++/11/ciso646 \
@@ -1039,25 +1040,26 @@ CMakeFiles/untitled87.dir/untitled87_autogen/mocs_compilation.cpp.o: \
  /usr/include/pqxx/subtransaction /usr/include/pqxx/subtransaction.hxx \
  /usr/include/pqxx/transaction /usr/include/pqxx/transaction.hxx \
  /usr/include/pqxx/transactor /usr/include/pqxx/transactor.hxx \
- /home/ivan/CLionProjects/untitled87/cmake-build-debug/untitled87_autogen/EWIEGA46WW/moc_insertbank.cpp \
- /home/ivan/CLionProjects/untitled87/cmake-build-debug/untitled87_autogen/EWIEGA46WW/../../../insertbank.hpp \
- /home/ivan/CLionProjects/untitled87/cmake-build-debug/untitled87_autogen/EWIEGA46WW/moc_insertcurrency.cpp \
- /home/ivan/CLionProjects/untitled87/cmake-build-debug/untitled87_autogen/EWIEGA46WW/../../../insertcurrency.hpp \
- /home/ivan/CLionProjects/untitled87/cmake-build-debug/untitled87_autogen/EWIEGA46WW/moc_mainwindow.cpp \
- /home/ivan/CLionProjects/untitled87/cmake-build-debug/untitled87_autogen/EWIEGA46WW/../../../mainwindow.hpp \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMessageBox \
- /home/ivan/CLionProjects/untitled87/cmake-build-debug/untitled87_autogen/EWIEGA46WW/../../../insertbank.hpp \
- /home/ivan/CLionProjects/untitled87/cmake-build-debug/untitled87_autogen/EWIEGA46WW/../../../insertaccount.hpp \
- /home/ivan/CLionProjects/untitled87/cmake-build-debug/untitled87_autogen/EWIEGA46WW/../../../insertcurrency.hpp \
- /home/ivan/CLionProjects/untitled87/cmake-build-debug/untitled87_autogen/EWIEGA46WW/../../../transaction.hpp \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/cmake-build-debug/untitled87_autogen/EWIEGA46WW/moc_insertbank.cpp \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/cmake-build-debug/untitled87_autogen/EWIEGA46WW/../../../insertbank.hpp \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/cmake-build-debug/untitled87_autogen/EWIEGA46WW/moc_insertcurrency.cpp \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/cmake-build-debug/untitled87_autogen/EWIEGA46WW/../../../insertcurrency.hpp \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/cmake-build-debug/untitled87_autogen/EWIEGA46WW/moc_mainwindow.cpp \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/cmake-build-debug/untitled87_autogen/EWIEGA46WW/../../../mainwindow.hpp \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/cmake-build-debug/untitled87_autogen/EWIEGA46WW/../../../insertbank.hpp \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/cmake-build-debug/untitled87_autogen/EWIEGA46WW/../../../insertaccount.hpp \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/cmake-build-debug/untitled87_autogen/EWIEGA46WW/../../../insertcurrency.hpp \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/cmake-build-debug/untitled87_autogen/EWIEGA46WW/../../../transaction.hpp \
  /usr/include/x86_64-linux-gnu/qt5/QtCharts/QValueAxis \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QException \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QFont \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication \
  /usr/include/x86_64-linux-gnu/qt5/QtCharts/QChartView \
  /usr/include/x86_64-linux-gnu/qt5/QtCharts/QBarSeries \
  /usr/include/x86_64-linux-gnu/qt5/QtCharts/QBarCategoryAxis \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHBoxLayout \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel \
- /home/ivan/CLionProjects/untitled87/cmake-build-debug/untitled87_autogen/EWIEGA46WW/../../../stockmarket.hpp \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/cmake-build-debug/untitled87_autogen/EWIEGA46WW/../../../stockmarket.hpp \
  /usr/include/x86_64-linux-gnu/qt5/QtCharts/QScatterSeries \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QStringList \
  /usr/include/x86_64-linux-gnu/qt5/QtCharts/QCategoryAxis \
@@ -1065,7 +1067,7 @@ CMakeFiles/untitled87.dir/untitled87_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCharts/QBarSeries \
  /usr/include/x86_64-linux-gnu/qt5/QtCharts/QBarSet \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout \
- /home/ivan/CLionProjects/untitled87/cmake-build-debug/untitled87_autogen/EWIEGA46WW/moc_stockmarket.cpp \
- /home/ivan/CLionProjects/untitled87/cmake-build-debug/untitled87_autogen/EWIEGA46WW/../../../stockmarket.hpp \
- /home/ivan/CLionProjects/untitled87/cmake-build-debug/untitled87_autogen/EWIEGA46WW/moc_transaction.cpp \
- /home/ivan/CLionProjects/untitled87/cmake-build-debug/untitled87_autogen/EWIEGA46WW/../../../transaction.hpp
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/cmake-build-debug/untitled87_autogen/EWIEGA46WW/moc_stockmarket.cpp \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/cmake-build-debug/untitled87_autogen/EWIEGA46WW/../../../stockmarket.hpp \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/cmake-build-debug/untitled87_autogen/EWIEGA46WW/moc_transaction.cpp \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/cmake-build-debug/untitled87_autogen/EWIEGA46WW/../../../transaction.hpp

@@ -1,7 +1,7 @@
 CMakeFiles/untitled87.dir/stockmarket.cpp.o: \
- /home/ivan/CLionProjects/untitled87/stockmarket.cpp \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/stockmarket.cpp \
  /usr/include/stdc-predef.h \
- /home/ivan/CLionProjects/untitled87/stockmarket.hpp \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/stockmarket.hpp \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
@@ -279,9 +279,14 @@ CMakeFiles/untitled87.dir/stockmarket.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QException \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qexception.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMessageBox \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmessagebox.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLineEdit \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlineedit.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \
@@ -363,7 +368,7 @@ CMakeFiles/untitled87.dir/stockmarket.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgridlayout.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h \
- /home/ivan/CLionProjects/untitled87/ConnectionTool.hpp \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/ConnectionTool.hpp \
  /usr/include/pqxx/pqxx /usr/include/pqxx/array \
  /usr/include/pqxx/array.hxx /usr/include/pqxx/compiler-public.hxx \
  /usr/include/pqxx/config-public-compiler.h /usr/include/c++/11/ciso646 \
@@ -416,7 +421,7 @@ CMakeFiles/untitled87.dir/stockmarket.cpp.o: \
  /usr/include/pqxx/subtransaction /usr/include/pqxx/subtransaction.hxx \
  /usr/include/pqxx/transaction /usr/include/pqxx/transaction.hxx \
  /usr/include/pqxx/transactor /usr/include/pqxx/transactor.hxx \
- /home/ivan/CLionProjects/untitled87/ui_StockMarket.h \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/ui_StockMarket.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h \

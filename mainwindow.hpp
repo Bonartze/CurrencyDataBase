@@ -38,6 +38,8 @@ private slots:
 
     void onButtonClicked4();
 
+    void onButtonClicked5();
+
 private:
     QVBoxLayout *vl;
     QHBoxLayout *layout;
@@ -46,4 +48,5 @@ private:
     std::vector<QWidget *> windows_for_insert;
     std::vector<QPushButton *> insert_buttons;
 };
+
 #endif

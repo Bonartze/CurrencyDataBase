@@ -1,7 +1,7 @@
 CMakeFiles/untitled87.dir/insertcurrency.cpp.o: \
- /home/ivan/CLionProjects/untitled87/insertcurrency.cpp \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/insertcurrency.cpp \
  /usr/include/stdc-predef.h \
- /home/ivan/CLionProjects/untitled87/insertcurrency.hpp \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/insertcurrency.hpp \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
@@ -984,7 +984,7 @@ CMakeFiles/untitled87.dir/insertcurrency.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCharts/QChartView \
  /usr/include/x86_64-linux-gnu/qt5/QtCharts/QPieSeries \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
- /home/ivan/CLionProjects/untitled87/ConnectionTool.hpp \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/ConnectionTool.hpp \
  /usr/include/pqxx/pqxx /usr/include/pqxx/array \
  /usr/include/pqxx/array.hxx /usr/include/pqxx/compiler-public.hxx \
  /usr/include/pqxx/config-public-compiler.h /usr/include/c++/11/ciso646 \
@@ -1037,5 +1037,5 @@ CMakeFiles/untitled87.dir/insertcurrency.cpp.o: \
  /usr/include/pqxx/subtransaction /usr/include/pqxx/subtransaction.hxx \
  /usr/include/pqxx/transaction /usr/include/pqxx/transaction.hxx \
  /usr/include/pqxx/transactor /usr/include/pqxx/transactor.hxx \
- /home/ivan/CLionProjects/untitled87/ui_InsertCurrency.h \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/ui_InsertCurrency.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication

@@ -1,7 +1,7 @@
 CMakeFiles/untitled87.dir/insertbank.cpp.o: \
- /home/ivan/CLionProjects/untitled87/insertbank.cpp \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/insertbank.cpp \
  /usr/include/stdc-predef.h \
- /home/ivan/CLionProjects/untitled87/insertbank.hpp \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/insertbank.hpp \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
@@ -983,7 +983,7 @@ CMakeFiles/untitled87.dir/insertbank.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCharts/qtchartsversion.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCharts/QChartView \
  /usr/include/x86_64-linux-gnu/qt5/QtCharts/QPieSeries \
- /home/ivan/CLionProjects/untitled87/ConnectionTool.hpp \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/ConnectionTool.hpp \
  /usr/include/pqxx/pqxx /usr/include/pqxx/array \
  /usr/include/pqxx/array.hxx /usr/include/pqxx/compiler-public.hxx \
  /usr/include/pqxx/config-public-compiler.h /usr/include/c++/11/ciso646 \
@@ -1036,7 +1036,7 @@ CMakeFiles/untitled87.dir/insertbank.cpp.o: \
  /usr/include/pqxx/subtransaction /usr/include/pqxx/subtransaction.hxx \
  /usr/include/pqxx/transaction /usr/include/pqxx/transaction.hxx \
  /usr/include/pqxx/transactor /usr/include/pqxx/transactor.hxx \
- /home/ivan/CLionProjects/untitled87/ui_InsertBank.h \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/ui_InsertBank.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMenuBar \

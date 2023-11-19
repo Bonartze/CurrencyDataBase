@@ -1,7 +1,7 @@
 CMakeFiles/untitled87.dir/mainwindow.cpp.o: \
- /home/ivan/CLionProjects/untitled87/mainwindow.cpp \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/mainwindow.cpp \
  /usr/include/stdc-predef.h \
- /home/ivan/CLionProjects/untitled87/mainwindow.hpp \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/mainwindow.hpp \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
@@ -339,7 +339,7 @@ CMakeFiles/untitled87.dir/mainwindow.cpp.o: \
  /usr/include/pqxx/subtransaction /usr/include/pqxx/subtransaction.hxx \
  /usr/include/pqxx/transaction /usr/include/pqxx/transaction.hxx \
  /usr/include/pqxx/transactor /usr/include/pqxx/transactor.hxx \
- /home/ivan/CLionProjects/untitled87/insertbank.hpp \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/insertbank.hpp \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLineEdit \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlineedit.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \
@@ -1038,18 +1038,20 @@ CMakeFiles/untitled87.dir/mainwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCharts/qtchartsversion.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCharts/QChartView \
  /usr/include/x86_64-linux-gnu/qt5/QtCharts/QPieSeries \
- /home/ivan/CLionProjects/untitled87/ConnectionTool.hpp \
- /home/ivan/CLionProjects/untitled87/insertaccount.hpp \
- /home/ivan/CLionProjects/untitled87/insertcurrency.hpp \
- /home/ivan/CLionProjects/untitled87/transaction.hpp \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/ConnectionTool.hpp \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/insertaccount.hpp \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/insertcurrency.hpp \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/transaction.hpp \
  /usr/include/x86_64-linux-gnu/qt5/QtCharts/QValueAxis \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QException \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QFont \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication \
  /usr/include/x86_64-linux-gnu/qt5/QtCharts/QChartView \
  /usr/include/x86_64-linux-gnu/qt5/QtCharts/QBarSeries \
  /usr/include/x86_64-linux-gnu/qt5/QtCharts/QBarCategoryAxis \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHBoxLayout \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel \
- /home/ivan/CLionProjects/untitled87/stockmarket.hpp \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/stockmarket.hpp \
  /usr/include/x86_64-linux-gnu/qt5/QtCharts/QScatterSeries \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QStringList \
  /usr/include/x86_64-linux-gnu/qt5/QtCharts/QCategoryAxis \
@@ -1057,4 +1059,4 @@ CMakeFiles/untitled87.dir/mainwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCharts/QBarSeries \
  /usr/include/x86_64-linux-gnu/qt5/QtCharts/QBarSet \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout \
- /home/ivan/CLionProjects/untitled87/ui_MainWindow.h
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/ui_MainWindow.h

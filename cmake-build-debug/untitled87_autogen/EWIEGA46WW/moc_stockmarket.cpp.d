@@ -1,6 +1,6 @@
-/home/ivan/CLionProjects/untitled87/cmake-build-debug/untitled87_autogen/EWIEGA46WW/moc_stockmarket.cpp: /home/ivan/CLionProjects/untitled87/stockmarket.hpp \
-  /home/ivan/CLionProjects/untitled87/cmake-build-debug/untitled87_autogen/moc_predefs.h \
-  /home/ivan/CLionProjects/untitled87/ConnectionTool.hpp \
+/home/ivan/Рабочий\ стол/CurrencyDataBase/cmake-build-debug/untitled87_autogen/EWIEGA46WW/moc_stockmarket.cpp: /home/ivan/Рабочий\ стол/CurrencyDataBase/stockmarket.hpp \
+  /home/ivan/Рабочий\ стол/CurrencyDataBase/cmake-build-debug/untitled87_autogen/moc_predefs.h \
+  /home/ivan/Рабочий\ стол/CurrencyDataBase/ConnectionTool.hpp \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/assert.h \
@@ -339,6 +339,7 @@
   /usr/include/x86_64-linux-gnu/qt5/QtCharts/qscatterseries.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCharts/qvalueaxis.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCharts/qxyseries.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QException \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QMargins \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QStringList \
@@ -358,6 +359,7 @@
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainertools_impl.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatastream.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qexception.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h \
@@ -446,11 +448,13 @@
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLineEdit \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMessageBox \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qboxlayout.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsitem.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicslayoutitem.h \
@@ -463,6 +467,7 @@
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayoutitem.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlineedit.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmessagebox.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qscrollarea.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h \

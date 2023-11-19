@@ -1,6 +1,6 @@
-/home/ivan/CLionProjects/untitled87/cmake-build-debug/untitled87_autogen/EWIEGA46WW/moc_insertcurrency.cpp: /home/ivan/CLionProjects/untitled87/insertcurrency.hpp \
-  /home/ivan/CLionProjects/untitled87/cmake-build-debug/untitled87_autogen/moc_predefs.h \
-  /home/ivan/CLionProjects/untitled87/ConnectionTool.hpp \
+/home/ivan/Рабочий\ стол/CurrencyDataBase/cmake-build-debug/untitled87_autogen/EWIEGA46WW/moc_insertcurrency.cpp: /home/ivan/Рабочий\ стол/CurrencyDataBase/insertcurrency.hpp \
+  /home/ivan/Рабочий\ стол/CurrencyDataBase/cmake-build-debug/untitled87_autogen/moc_predefs.h \
+  /home/ivan/Рабочий\ стол/CurrencyDataBase/ConnectionTool.hpp \
   /usr/include/GL/gl.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \

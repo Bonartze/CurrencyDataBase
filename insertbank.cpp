@@ -58,6 +58,9 @@ InsertBank::InsertBank(QWidget *parent) : QMainWindow(parent), ui(new Ui::Insert
         insert_line_bank[i]->move(100, 10 + 50 * i);
         insert_line_bank[i]->setFixedWidth(200);
     }
+    insert_line_bank[0]->setPlaceholderText("12");
+    insert_line_bank[1]->setPlaceholderText("SDM");
+
 }
 
 InsertBank::~InsertBank() {
@@ -95,11 +98,11 @@ void InsertBank::onButtonCLickedChart() {
 
     int totalTransactions = 0;
 
-    for (const auto &row : res_query) {
+    for (const auto &row: res_query) {
         totalTransactions += row["transaction_count"].as<int>();
     }
 
-    for (const auto &row : res_query) {
+    for (const auto &row: res_query) {
         QString bank_name = QString::fromStdString(row["name"].as<std::string>());
         int transaction_count = row["transaction_count"].as<int>();
         double percentage = static_cast<double>(transaction_count) / totalTransactions * 100.0;
@@ -117,8 +120,6 @@ void InsertBank::onButtonCLickedChart() {
     chartview->setWindowTitle("PieChart");
     chartview->show();
 }
-
-
 
 
 void InsertBank::onButtonClickedDeleted() {

@@ -53,10 +53,10 @@ RM = /snap/clion/250/bin/cmake/linux/x64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ivan/CLionProjects/untitled87
+CMAKE_SOURCE_DIR = "/home/ivan/Рабочий стол/CurrencyDataBase"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ivan/CLionProjects/untitled87/cmake-build-debug
+CMAKE_BINARY_DIR = "/home/ivan/Рабочий стол/CurrencyDataBase/cmake-build-debug"
 
 # Utility rule file for untitled87_autogen.
 
@@ -67,8 +67,8 @@ include CMakeFiles/untitled87_autogen.dir/compiler_depend.make
 include CMakeFiles/untitled87_autogen.dir/progress.make
 
 CMakeFiles/untitled87_autogen:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ivan/CLionProjects/untitled87/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target untitled87"
-	/snap/clion/250/bin/cmake/linux/x64/bin/cmake -E cmake_autogen /home/ivan/CLionProjects/untitled87/cmake-build-debug/CMakeFiles/untitled87_autogen.dir/AutogenInfo.json Debug
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir="/home/ivan/Рабочий стол/CurrencyDataBase/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target untitled87"
+	/snap/clion/250/bin/cmake/linux/x64/bin/cmake -E cmake_autogen "/home/ivan/Рабочий стол/CurrencyDataBase/cmake-build-debug/CMakeFiles/untitled87_autogen.dir/AutogenInfo.json" Debug
 
 untitled87_autogen: CMakeFiles/untitled87_autogen
 untitled87_autogen: CMakeFiles/untitled87_autogen.dir/build.make
@@ -83,6 +83,6 @@ CMakeFiles/untitled87_autogen.dir/clean:
 .PHONY : CMakeFiles/untitled87_autogen.dir/clean
 
 CMakeFiles/untitled87_autogen.dir/depend:
-	cd /home/ivan/CLionProjects/untitled87/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ivan/CLionProjects/untitled87 /home/ivan/CLionProjects/untitled87 /home/ivan/CLionProjects/untitled87/cmake-build-debug /home/ivan/CLionProjects/untitled87/cmake-build-debug /home/ivan/CLionProjects/untitled87/cmake-build-debug/CMakeFiles/untitled87_autogen.dir/DependInfo.cmake --color=$(COLOR)
+	cd "/home/ivan/Рабочий стол/CurrencyDataBase/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/ivan/Рабочий стол/CurrencyDataBase" "/home/ivan/Рабочий стол/CurrencyDataBase" "/home/ivan/Рабочий стол/CurrencyDataBase/cmake-build-debug" "/home/ivan/Рабочий стол/CurrencyDataBase/cmake-build-debug" "/home/ivan/Рабочий стол/CurrencyDataBase/cmake-build-debug/CMakeFiles/untitled87_autogen.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/untitled87_autogen.dir/depend
 

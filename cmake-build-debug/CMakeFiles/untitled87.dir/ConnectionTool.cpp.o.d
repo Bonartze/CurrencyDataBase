@@ -1,7 +1,7 @@
 CMakeFiles/untitled87.dir/ConnectionTool.cpp.o: \
- /home/ivan/CLionProjects/untitled87/ConnectionTool.cpp \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/ConnectionTool.cpp \
  /usr/include/stdc-predef.h \
- /home/ivan/CLionProjects/untitled87/ConnectionTool.hpp \
+ /home/ivan/Рабочий\ стол/CurrencyDataBase/ConnectionTool.hpp \
  /usr/include/pqxx/pqxx /usr/include/pqxx/array \
  /usr/include/pqxx/array.hxx /usr/include/pqxx/compiler-public.hxx \
  /usr/include/pqxx/config-public-compiler.h /usr/include/c++/11/ciso646 \
