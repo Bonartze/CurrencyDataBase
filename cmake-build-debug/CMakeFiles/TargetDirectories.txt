@@ -1,0 +1,4 @@
+/home/ivan/CLionProjects/untitled87/cmake-build-debug/CMakeFiles/untitled87.dir
+/home/ivan/CLionProjects/untitled87/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/ivan/CLionProjects/untitled87/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/ivan/CLionProjects/untitled87/cmake-build-debug/CMakeFiles/untitled87_autogen.dir
