@@ -144,7 +144,7 @@ void InsertCurrency::onButtonCLickedChart() {
 
         chartview = new QChartView(chart);
         chartview->show();
-
+        chartview->setWindowTitle("PieChart");
         for (const auto &slice: series->slices()) {
             slice->setLabel(QString("%1%\n%2").arg(QString::number(slice->percentage(), 'f', 2)).arg(slice->label()));
         }

@@ -137,6 +137,7 @@ void StockMarket::onButtonClickedIncomeCurrency() {
 
         chartView = new QtCharts::QChartView(chart);
         chartView->setRenderHint(QPainter::Antialiasing);
+        chartView->setWindowTitle("Diagram");
         chartView->show();
     }
     catch (std::exception &ex) {

@@ -114,6 +114,7 @@ void InsertBank::onButtonCLickedChart() {
     chart->setTitle("Banks usage");
 
     chartview = new QChartView(chart);
+    chartview->setWindowTitle("PieChart");
     chartview->show();
 }
 

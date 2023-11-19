@@ -112,11 +112,11 @@ void InsertAccount::onButtonClickedBalanceChangeEachYear() {
 
     int totalUsage = 0;
 
-    for (const auto &row : res_query) {
+    for (const auto &row: res_query) {
         totalUsage += row["percentage_of_usage"].as<double>();
     }
 
-    for (const auto &row : res_query) {
+    for (const auto &row: res_query) {
         QString bank_name = QString::fromStdString(row["bank_name"].as<std::string>());
         double percentage_of_usage = row["percentage_of_usage"].as<double>();
 
@@ -130,6 +130,7 @@ void InsertAccount::onButtonClickedBalanceChangeEachYear() {
     chart[0]->setTitle("Banks usage percentage");
 
     chartview[0] = new QChartView(chart[0]);
+    chartview[0]->setWindowTitle("PieChart");
     chartview[0]->show();
 }
 
@@ -153,11 +154,11 @@ void InsertAccount::onButtonClickedStockMarketUsage() {
 
     int totalUsage = 0;
 
-    for (const auto &row : res_query) {
+    for (const auto &row: res_query) {
         totalUsage += row["percentage_of_usage"].as<double>();
     }
 
-    for (const auto &row : res_query) {
+    for (const auto &row: res_query) {
         QString stock_market_id = QString::fromStdString(row["stock_market_id"].as<std::string>());
         double percentage_of_usage = row["percentage_of_usage"].as<double>();
 
@@ -171,6 +172,7 @@ void InsertAccount::onButtonClickedStockMarketUsage() {
     chart[1]->setTitle("Stock markets usage percentage");
 
     chartview[1] = new QChartView(chart[1]);
+    chartview[0]->setWindowTitle("PieChart");
     chartview[1]->show();
 }
 
