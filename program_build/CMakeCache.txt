@@ -151,7 +151,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=untitled87
+CMAKE_PROJECT_NAME:STATIC=CurrencyDataBase
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -214,6 +214,15 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // during the make.  This is useful for debugging only. With Visual
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
+
+//Value Computed by CMake
+CurrencyDataBase_BINARY_DIR:STATIC=/home/ivan/Рабочий стол/CurrencyDataBase/program_build
+
+//Value Computed by CMake
+CurrencyDataBase_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+CurrencyDataBase_SOURCE_DIR:STATIC=/home/ivan/Рабочий стол/CurrencyDataBase
 
 //Path to a library.
 PQXX_LIB:FILEPATH=/usr/lib/x86_64-linux-gnu/libpqxx.so

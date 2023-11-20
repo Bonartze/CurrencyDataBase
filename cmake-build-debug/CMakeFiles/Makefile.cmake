@@ -88,12 +88,12 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
-  "CMakeFiles/untitled87_autogen.dir/AutogenInfo.json"
+  "CMakeFiles/CurrencyDataBase_autogen.dir/AutogenInfo.json"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/untitled87.dir/DependInfo.cmake"
-  "CMakeFiles/untitled87_autogen.dir/DependInfo.cmake"
+  "CMakeFiles/CurrencyDataBase.dir/DependInfo.cmake"
+  "CMakeFiles/CurrencyDataBase_autogen.dir/DependInfo.cmake"
   )

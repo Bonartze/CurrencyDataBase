@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.22.1)
-project(untitled87)
+project(CurrencyDataBase)
 find_package(Boost)
 if (Boost_FOUND)
     include_directories(${Boost_INCLUDE_DIR})
@@ -21,7 +21,7 @@ find_package(Qt5 COMPONENTS
         REQUIRED)
 
 
-add_executable(untitled87
+add_executable(CurrencyDataBase
         main.cpp
         mainwindow.cpp
         mainwindow.ui
@@ -43,7 +43,7 @@ add_executable(untitled87
         ConnectionTool.cpp
         ConnectionTool.hpp)
 
-target_link_libraries(untitled87
+target_link_libraries(CurrencyDataBase
         Qt5::Core
         Qt5::Gui
         Qt5::Widgets

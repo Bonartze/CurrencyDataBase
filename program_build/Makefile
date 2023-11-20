@@ -117,37 +117,37 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named untitled87
+# Target rules for targets named CurrencyDataBase
 
 # Build rule for target.
-untitled87: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 untitled87
-.PHONY : untitled87
+CurrencyDataBase: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CurrencyDataBase
+.PHONY : CurrencyDataBase
 
 # fast build rule for target.
-untitled87/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled87.dir/build.make CMakeFiles/untitled87.dir/build
-.PHONY : untitled87/fast
+CurrencyDataBase/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/build
+.PHONY : CurrencyDataBase/fast
 
 #=============================================================================
-# Target rules for targets named untitled87_autogen
+# Target rules for targets named CurrencyDataBase_autogen
 
 # Build rule for target.
-untitled87_autogen: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 untitled87_autogen
-.PHONY : untitled87_autogen
+CurrencyDataBase_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CurrencyDataBase_autogen
+.PHONY : CurrencyDataBase_autogen
 
 # fast build rule for target.
-untitled87_autogen/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled87_autogen.dir/build.make CMakeFiles/untitled87_autogen.dir/build
-.PHONY : untitled87_autogen/fast
+CurrencyDataBase_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase_autogen.dir/build.make CMakeFiles/CurrencyDataBase_autogen.dir/build
+.PHONY : CurrencyDataBase_autogen/fast
 
 ConnectionTool.o: ConnectionTool.cpp.o
 .PHONY : ConnectionTool.o
 
 # target to build an object file
 ConnectionTool.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled87.dir/build.make CMakeFiles/untitled87.dir/ConnectionTool.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/ConnectionTool.cpp.o
 .PHONY : ConnectionTool.cpp.o
 
 ConnectionTool.i: ConnectionTool.cpp.i
@@ -155,7 +155,7 @@ ConnectionTool.i: ConnectionTool.cpp.i
 
 # target to preprocess a source file
 ConnectionTool.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled87.dir/build.make CMakeFiles/untitled87.dir/ConnectionTool.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/ConnectionTool.cpp.i
 .PHONY : ConnectionTool.cpp.i
 
 ConnectionTool.s: ConnectionTool.cpp.s
@@ -163,15 +163,39 @@ ConnectionTool.s: ConnectionTool.cpp.s
 
 # target to generate assembly for a file
 ConnectionTool.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled87.dir/build.make CMakeFiles/untitled87.dir/ConnectionTool.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/ConnectionTool.cpp.s
 .PHONY : ConnectionTool.cpp.s
+
+CurrencyDataBase_autogen/mocs_compilation.o: CurrencyDataBase_autogen/mocs_compilation.cpp.o
+.PHONY : CurrencyDataBase_autogen/mocs_compilation.o
+
+# target to build an object file
+CurrencyDataBase_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/CurrencyDataBase_autogen/mocs_compilation.cpp.o
+.PHONY : CurrencyDataBase_autogen/mocs_compilation.cpp.o
+
+CurrencyDataBase_autogen/mocs_compilation.i: CurrencyDataBase_autogen/mocs_compilation.cpp.i
+.PHONY : CurrencyDataBase_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+CurrencyDataBase_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/CurrencyDataBase_autogen/mocs_compilation.cpp.i
+.PHONY : CurrencyDataBase_autogen/mocs_compilation.cpp.i
+
+CurrencyDataBase_autogen/mocs_compilation.s: CurrencyDataBase_autogen/mocs_compilation.cpp.s
+.PHONY : CurrencyDataBase_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+CurrencyDataBase_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/CurrencyDataBase_autogen/mocs_compilation.cpp.s
+.PHONY : CurrencyDataBase_autogen/mocs_compilation.cpp.s
 
 insertaccount.o: insertaccount.cpp.o
 .PHONY : insertaccount.o
 
 # target to build an object file
 insertaccount.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled87.dir/build.make CMakeFiles/untitled87.dir/insertaccount.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/insertaccount.cpp.o
 .PHONY : insertaccount.cpp.o
 
 insertaccount.i: insertaccount.cpp.i
@@ -179,7 +203,7 @@ insertaccount.i: insertaccount.cpp.i
 
 # target to preprocess a source file
 insertaccount.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled87.dir/build.make CMakeFiles/untitled87.dir/insertaccount.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/insertaccount.cpp.i
 .PHONY : insertaccount.cpp.i
 
 insertaccount.s: insertaccount.cpp.s
@@ -187,7 +211,7 @@ insertaccount.s: insertaccount.cpp.s
 
 # target to generate assembly for a file
 insertaccount.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled87.dir/build.make CMakeFiles/untitled87.dir/insertaccount.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/insertaccount.cpp.s
 .PHONY : insertaccount.cpp.s
 
 insertbank.o: insertbank.cpp.o
@@ -195,7 +219,7 @@ insertbank.o: insertbank.cpp.o
 
 # target to build an object file
 insertbank.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled87.dir/build.make CMakeFiles/untitled87.dir/insertbank.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/insertbank.cpp.o
 .PHONY : insertbank.cpp.o
 
 insertbank.i: insertbank.cpp.i
@@ -203,7 +227,7 @@ insertbank.i: insertbank.cpp.i
 
 # target to preprocess a source file
 insertbank.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled87.dir/build.make CMakeFiles/untitled87.dir/insertbank.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/insertbank.cpp.i
 .PHONY : insertbank.cpp.i
 
 insertbank.s: insertbank.cpp.s
@@ -211,7 +235,7 @@ insertbank.s: insertbank.cpp.s
 
 # target to generate assembly for a file
 insertbank.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled87.dir/build.make CMakeFiles/untitled87.dir/insertbank.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/insertbank.cpp.s
 .PHONY : insertbank.cpp.s
 
 insertcurrency.o: insertcurrency.cpp.o
@@ -219,7 +243,7 @@ insertcurrency.o: insertcurrency.cpp.o
 
 # target to build an object file
 insertcurrency.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled87.dir/build.make CMakeFiles/untitled87.dir/insertcurrency.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/insertcurrency.cpp.o
 .PHONY : insertcurrency.cpp.o
 
 insertcurrency.i: insertcurrency.cpp.i
@@ -227,7 +251,7 @@ insertcurrency.i: insertcurrency.cpp.i
 
 # target to preprocess a source file
 insertcurrency.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled87.dir/build.make CMakeFiles/untitled87.dir/insertcurrency.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/insertcurrency.cpp.i
 .PHONY : insertcurrency.cpp.i
 
 insertcurrency.s: insertcurrency.cpp.s
@@ -235,7 +259,7 @@ insertcurrency.s: insertcurrency.cpp.s
 
 # target to generate assembly for a file
 insertcurrency.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled87.dir/build.make CMakeFiles/untitled87.dir/insertcurrency.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/insertcurrency.cpp.s
 .PHONY : insertcurrency.cpp.s
 
 main.o: main.cpp.o
@@ -243,7 +267,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled87.dir/build.make CMakeFiles/untitled87.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -251,7 +275,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled87.dir/build.make CMakeFiles/untitled87.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -259,7 +283,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled87.dir/build.make CMakeFiles/untitled87.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 mainwindow.o: mainwindow.cpp.o
@@ -267,7 +291,7 @@ mainwindow.o: mainwindow.cpp.o
 
 # target to build an object file
 mainwindow.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled87.dir/build.make CMakeFiles/untitled87.dir/mainwindow.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/mainwindow.cpp.o
 .PHONY : mainwindow.cpp.o
 
 mainwindow.i: mainwindow.cpp.i
@@ -275,7 +299,7 @@ mainwindow.i: mainwindow.cpp.i
 
 # target to preprocess a source file
 mainwindow.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled87.dir/build.make CMakeFiles/untitled87.dir/mainwindow.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/mainwindow.cpp.i
 .PHONY : mainwindow.cpp.i
 
 mainwindow.s: mainwindow.cpp.s
@@ -283,7 +307,7 @@ mainwindow.s: mainwindow.cpp.s
 
 # target to generate assembly for a file
 mainwindow.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled87.dir/build.make CMakeFiles/untitled87.dir/mainwindow.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/mainwindow.cpp.s
 .PHONY : mainwindow.cpp.s
 
 stockmarket.o: stockmarket.cpp.o
@@ -291,7 +315,7 @@ stockmarket.o: stockmarket.cpp.o
 
 # target to build an object file
 stockmarket.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled87.dir/build.make CMakeFiles/untitled87.dir/stockmarket.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/stockmarket.cpp.o
 .PHONY : stockmarket.cpp.o
 
 stockmarket.i: stockmarket.cpp.i
@@ -299,7 +323,7 @@ stockmarket.i: stockmarket.cpp.i
 
 # target to preprocess a source file
 stockmarket.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled87.dir/build.make CMakeFiles/untitled87.dir/stockmarket.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/stockmarket.cpp.i
 .PHONY : stockmarket.cpp.i
 
 stockmarket.s: stockmarket.cpp.s
@@ -307,7 +331,7 @@ stockmarket.s: stockmarket.cpp.s
 
 # target to generate assembly for a file
 stockmarket.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled87.dir/build.make CMakeFiles/untitled87.dir/stockmarket.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/stockmarket.cpp.s
 .PHONY : stockmarket.cpp.s
 
 transaction.o: transaction.cpp.o
@@ -315,7 +339,7 @@ transaction.o: transaction.cpp.o
 
 # target to build an object file
 transaction.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled87.dir/build.make CMakeFiles/untitled87.dir/transaction.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/transaction.cpp.o
 .PHONY : transaction.cpp.o
 
 transaction.i: transaction.cpp.i
@@ -323,7 +347,7 @@ transaction.i: transaction.cpp.i
 
 # target to preprocess a source file
 transaction.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled87.dir/build.make CMakeFiles/untitled87.dir/transaction.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/transaction.cpp.i
 .PHONY : transaction.cpp.i
 
 transaction.s: transaction.cpp.s
@@ -331,32 +355,8 @@ transaction.s: transaction.cpp.s
 
 # target to generate assembly for a file
 transaction.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled87.dir/build.make CMakeFiles/untitled87.dir/transaction.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/transaction.cpp.s
 .PHONY : transaction.cpp.s
-
-untitled87_autogen/mocs_compilation.o: untitled87_autogen/mocs_compilation.cpp.o
-.PHONY : untitled87_autogen/mocs_compilation.o
-
-# target to build an object file
-untitled87_autogen/mocs_compilation.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled87.dir/build.make CMakeFiles/untitled87.dir/untitled87_autogen/mocs_compilation.cpp.o
-.PHONY : untitled87_autogen/mocs_compilation.cpp.o
-
-untitled87_autogen/mocs_compilation.i: untitled87_autogen/mocs_compilation.cpp.i
-.PHONY : untitled87_autogen/mocs_compilation.i
-
-# target to preprocess a source file
-untitled87_autogen/mocs_compilation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled87.dir/build.make CMakeFiles/untitled87.dir/untitled87_autogen/mocs_compilation.cpp.i
-.PHONY : untitled87_autogen/mocs_compilation.cpp.i
-
-untitled87_autogen/mocs_compilation.s: untitled87_autogen/mocs_compilation.cpp.s
-.PHONY : untitled87_autogen/mocs_compilation.s
-
-# target to generate assembly for a file
-untitled87_autogen/mocs_compilation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled87.dir/build.make CMakeFiles/untitled87.dir/untitled87_autogen/mocs_compilation.cpp.s
-.PHONY : untitled87_autogen/mocs_compilation.cpp.s
 
 # Help Target
 help:
@@ -366,11 +366,14 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... untitled87_autogen"
-	@echo "... untitled87"
+	@echo "... CurrencyDataBase_autogen"
+	@echo "... CurrencyDataBase"
 	@echo "... ConnectionTool.o"
 	@echo "... ConnectionTool.i"
 	@echo "... ConnectionTool.s"
+	@echo "... CurrencyDataBase_autogen/mocs_compilation.o"
+	@echo "... CurrencyDataBase_autogen/mocs_compilation.i"
+	@echo "... CurrencyDataBase_autogen/mocs_compilation.s"
 	@echo "... insertaccount.o"
 	@echo "... insertaccount.i"
 	@echo "... insertaccount.s"
@@ -392,9 +395,6 @@ help:
 	@echo "... transaction.o"
 	@echo "... transaction.i"
 	@echo "... transaction.s"
-	@echo "... untitled87_autogen/mocs_compilation.o"
-	@echo "... untitled87_autogen/mocs_compilation.i"
-	@echo "... untitled87_autogen/mocs_compilation.s"
 .PHONY : help
 
 
