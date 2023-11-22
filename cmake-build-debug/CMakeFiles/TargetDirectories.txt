@@ -1,4 +1,4 @@
-/home/ivan/Рабочий стол/CurrencyDataBase/cmake-build-debug/CMakeFiles/CurrencyDataBase.dir
-/home/ivan/Рабочий стол/CurrencyDataBase/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/ivan/Рабочий стол/CurrencyDataBase/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/ivan/Рабочий стол/CurrencyDataBase/cmake-build-debug/CMakeFiles/CurrencyDataBase_autogen.dir
+/home/ivan/Desktop/CurrencyDataBase_/cmake-build-debug/CMakeFiles/CurrencyDataBase.dir
+/home/ivan/Desktop/CurrencyDataBase_/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/ivan/Desktop/CurrencyDataBase_/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/ivan/Desktop/CurrencyDataBase_/cmake-build-debug/CMakeFiles/CurrencyDataBase_autogen.dir

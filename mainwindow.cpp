@@ -2,18 +2,10 @@
 
 #include "mainwindow.hpp"
 #include "ui_MainWindow.h"
+#include "ConnectionTool.hpp"
 
 MainWindow::MainWindow(QWidget *parent) : QWidget(parent), ui(new Ui::MainWindow) {
-    try {
-        pqxx::connection c(
-                "user=postgres password=123 host=127.0.0.1 port=5432 dbname=postgres target_session_attrs=read-write");
-    } catch (...) {
-        QMessageBox::critical(nullptr, "Error", "Can't connect to Data base", QMessageBox::Ok);
-    }
-
     ui->setupUi(this);
-
-
     insert_buttons.resize(6);
     windows_for_insert.resize(5);
     windows_for_insert[0] = new InsertBank();

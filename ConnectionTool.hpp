@@ -2,6 +2,8 @@
 #define UNTITLED87_CONNECTIONTOOL_HPP
 
 #include <pqxx/pqxx>
+#include <fstream>
+#include <unordered_map>
 
 class ConnectionTool {
 private:
