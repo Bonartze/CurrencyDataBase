@@ -22,29 +22,29 @@ find_package(Qt5 COMPONENTS
 
 
 add_executable(CurrencyDataBase
-        main.cpp
-        mainwindow.cpp
-        mainwindow.ui
-        insertbank.cpp
-        insertbank.hpp
-        insertbank.ui
-        insertaccount.cpp
-        insertaccount.hpp
-        insertaccount.ui
-        insertcurrency.cpp
-        insertcurrency.hpp
-        insertcurrency.ui
-        stockmarket.cpp
-        stockmarket.hpp
-        stockmarket.ui
-        transaction.cpp
-        transaction.hpp
-        transaction.ui
-        ConnectionTool.cpp
-        ConnectionTool.hpp
-        auntification.cpp
-        auntification.hpp
-        auntification.ui)
+        ./src/main.cpp
+        ./src/mainwindow.cpp
+        ./src/mainwindow.ui
+        ./src/insertbank.cpp
+        ./src/insertbank.hpp
+        ./src/insertbank.ui
+        ./src/insertaccount.cpp
+        ./src/insertaccount.hpp
+        ./src/insertaccount.ui
+        ./src/insertcurrency.cpp
+        ./src/insertcurrency.hpp
+        ./src/insertcurrency.ui
+        ./src/stockmarket.cpp
+        ./src/stockmarket.hpp
+        ./src/stockmarket.ui
+        ./src/transaction.cpp
+        ./src/transaction.hpp
+        ./src/transaction.ui
+        ./src/ConnectionTool.cpp
+        ./src/ConnectionTool.hpp
+        ./src/auntification.cpp
+        ./src/auntification.hpp
+        ./src/auntification.ui)
 
 target_link_libraries(CurrencyDataBase
         Qt5::Core

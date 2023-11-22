@@ -142,30 +142,6 @@ CurrencyDataBase_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase_autogen.dir/build.make CMakeFiles/CurrencyDataBase_autogen.dir/build
 .PHONY : CurrencyDataBase_autogen/fast
 
-ConnectionTool.o: ConnectionTool.cpp.o
-.PHONY : ConnectionTool.o
-
-# target to build an object file
-ConnectionTool.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/ConnectionTool.cpp.o
-.PHONY : ConnectionTool.cpp.o
-
-ConnectionTool.i: ConnectionTool.cpp.i
-.PHONY : ConnectionTool.i
-
-# target to preprocess a source file
-ConnectionTool.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/ConnectionTool.cpp.i
-.PHONY : ConnectionTool.cpp.i
-
-ConnectionTool.s: ConnectionTool.cpp.s
-.PHONY : ConnectionTool.s
-
-# target to generate assembly for a file
-ConnectionTool.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/ConnectionTool.cpp.s
-.PHONY : ConnectionTool.cpp.s
-
 CurrencyDataBase_autogen/mocs_compilation.o: CurrencyDataBase_autogen/mocs_compilation.cpp.o
 .PHONY : CurrencyDataBase_autogen/mocs_compilation.o
 
@@ -190,197 +166,221 @@ CurrencyDataBase_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/CurrencyDataBase_autogen/mocs_compilation.cpp.s
 .PHONY : CurrencyDataBase_autogen/mocs_compilation.cpp.s
 
-auntification.o: auntification.cpp.o
-.PHONY : auntification.o
+src/ConnectionTool.o: src/ConnectionTool.cpp.o
+.PHONY : src/ConnectionTool.o
 
 # target to build an object file
-auntification.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/auntification.cpp.o
-.PHONY : auntification.cpp.o
+src/ConnectionTool.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/src/ConnectionTool.cpp.o
+.PHONY : src/ConnectionTool.cpp.o
 
-auntification.i: auntification.cpp.i
-.PHONY : auntification.i
+src/ConnectionTool.i: src/ConnectionTool.cpp.i
+.PHONY : src/ConnectionTool.i
 
 # target to preprocess a source file
-auntification.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/auntification.cpp.i
-.PHONY : auntification.cpp.i
+src/ConnectionTool.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/src/ConnectionTool.cpp.i
+.PHONY : src/ConnectionTool.cpp.i
 
-auntification.s: auntification.cpp.s
-.PHONY : auntification.s
+src/ConnectionTool.s: src/ConnectionTool.cpp.s
+.PHONY : src/ConnectionTool.s
 
 # target to generate assembly for a file
-auntification.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/auntification.cpp.s
-.PHONY : auntification.cpp.s
+src/ConnectionTool.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/src/ConnectionTool.cpp.s
+.PHONY : src/ConnectionTool.cpp.s
 
-insertaccount.o: insertaccount.cpp.o
-.PHONY : insertaccount.o
+src/auntification.o: src/auntification.cpp.o
+.PHONY : src/auntification.o
 
 # target to build an object file
-insertaccount.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/insertaccount.cpp.o
-.PHONY : insertaccount.cpp.o
+src/auntification.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/src/auntification.cpp.o
+.PHONY : src/auntification.cpp.o
 
-insertaccount.i: insertaccount.cpp.i
-.PHONY : insertaccount.i
+src/auntification.i: src/auntification.cpp.i
+.PHONY : src/auntification.i
 
 # target to preprocess a source file
-insertaccount.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/insertaccount.cpp.i
-.PHONY : insertaccount.cpp.i
+src/auntification.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/src/auntification.cpp.i
+.PHONY : src/auntification.cpp.i
 
-insertaccount.s: insertaccount.cpp.s
-.PHONY : insertaccount.s
+src/auntification.s: src/auntification.cpp.s
+.PHONY : src/auntification.s
 
 # target to generate assembly for a file
-insertaccount.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/insertaccount.cpp.s
-.PHONY : insertaccount.cpp.s
+src/auntification.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/src/auntification.cpp.s
+.PHONY : src/auntification.cpp.s
 
-insertbank.o: insertbank.cpp.o
-.PHONY : insertbank.o
+src/insertaccount.o: src/insertaccount.cpp.o
+.PHONY : src/insertaccount.o
 
 # target to build an object file
-insertbank.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/insertbank.cpp.o
-.PHONY : insertbank.cpp.o
+src/insertaccount.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/src/insertaccount.cpp.o
+.PHONY : src/insertaccount.cpp.o
 
-insertbank.i: insertbank.cpp.i
-.PHONY : insertbank.i
+src/insertaccount.i: src/insertaccount.cpp.i
+.PHONY : src/insertaccount.i
 
 # target to preprocess a source file
-insertbank.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/insertbank.cpp.i
-.PHONY : insertbank.cpp.i
+src/insertaccount.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/src/insertaccount.cpp.i
+.PHONY : src/insertaccount.cpp.i
 
-insertbank.s: insertbank.cpp.s
-.PHONY : insertbank.s
+src/insertaccount.s: src/insertaccount.cpp.s
+.PHONY : src/insertaccount.s
 
 # target to generate assembly for a file
-insertbank.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/insertbank.cpp.s
-.PHONY : insertbank.cpp.s
+src/insertaccount.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/src/insertaccount.cpp.s
+.PHONY : src/insertaccount.cpp.s
 
-insertcurrency.o: insertcurrency.cpp.o
-.PHONY : insertcurrency.o
+src/insertbank.o: src/insertbank.cpp.o
+.PHONY : src/insertbank.o
 
 # target to build an object file
-insertcurrency.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/insertcurrency.cpp.o
-.PHONY : insertcurrency.cpp.o
+src/insertbank.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/src/insertbank.cpp.o
+.PHONY : src/insertbank.cpp.o
 
-insertcurrency.i: insertcurrency.cpp.i
-.PHONY : insertcurrency.i
+src/insertbank.i: src/insertbank.cpp.i
+.PHONY : src/insertbank.i
 
 # target to preprocess a source file
-insertcurrency.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/insertcurrency.cpp.i
-.PHONY : insertcurrency.cpp.i
+src/insertbank.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/src/insertbank.cpp.i
+.PHONY : src/insertbank.cpp.i
 
-insertcurrency.s: insertcurrency.cpp.s
-.PHONY : insertcurrency.s
+src/insertbank.s: src/insertbank.cpp.s
+.PHONY : src/insertbank.s
 
 # target to generate assembly for a file
-insertcurrency.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/insertcurrency.cpp.s
-.PHONY : insertcurrency.cpp.s
+src/insertbank.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/src/insertbank.cpp.s
+.PHONY : src/insertbank.cpp.s
 
-main.o: main.cpp.o
-.PHONY : main.o
+src/insertcurrency.o: src/insertcurrency.cpp.o
+.PHONY : src/insertcurrency.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/insertcurrency.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/src/insertcurrency.cpp.o
+.PHONY : src/insertcurrency.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+src/insertcurrency.i: src/insertcurrency.cpp.i
+.PHONY : src/insertcurrency.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/insertcurrency.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/src/insertcurrency.cpp.i
+.PHONY : src/insertcurrency.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+src/insertcurrency.s: src/insertcurrency.cpp.s
+.PHONY : src/insertcurrency.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/insertcurrency.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/src/insertcurrency.cpp.s
+.PHONY : src/insertcurrency.cpp.s
 
-mainwindow.o: mainwindow.cpp.o
-.PHONY : mainwindow.o
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
 
 # target to build an object file
-mainwindow.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/mainwindow.cpp.o
-.PHONY : mainwindow.cpp.o
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
-mainwindow.i: mainwindow.cpp.i
-.PHONY : mainwindow.i
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-mainwindow.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/mainwindow.cpp.i
-.PHONY : mainwindow.cpp.i
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-mainwindow.s: mainwindow.cpp.s
-.PHONY : mainwindow.s
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-mainwindow.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/mainwindow.cpp.s
-.PHONY : mainwindow.cpp.s
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
-stockmarket.o: stockmarket.cpp.o
-.PHONY : stockmarket.o
+src/mainwindow.o: src/mainwindow.cpp.o
+.PHONY : src/mainwindow.o
 
 # target to build an object file
-stockmarket.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/stockmarket.cpp.o
-.PHONY : stockmarket.cpp.o
+src/mainwindow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/src/mainwindow.cpp.o
+.PHONY : src/mainwindow.cpp.o
 
-stockmarket.i: stockmarket.cpp.i
-.PHONY : stockmarket.i
+src/mainwindow.i: src/mainwindow.cpp.i
+.PHONY : src/mainwindow.i
 
 # target to preprocess a source file
-stockmarket.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/stockmarket.cpp.i
-.PHONY : stockmarket.cpp.i
+src/mainwindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/src/mainwindow.cpp.i
+.PHONY : src/mainwindow.cpp.i
 
-stockmarket.s: stockmarket.cpp.s
-.PHONY : stockmarket.s
+src/mainwindow.s: src/mainwindow.cpp.s
+.PHONY : src/mainwindow.s
 
 # target to generate assembly for a file
-stockmarket.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/stockmarket.cpp.s
-.PHONY : stockmarket.cpp.s
+src/mainwindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/src/mainwindow.cpp.s
+.PHONY : src/mainwindow.cpp.s
 
-transaction.o: transaction.cpp.o
-.PHONY : transaction.o
+src/stockmarket.o: src/stockmarket.cpp.o
+.PHONY : src/stockmarket.o
 
 # target to build an object file
-transaction.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/transaction.cpp.o
-.PHONY : transaction.cpp.o
+src/stockmarket.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/src/stockmarket.cpp.o
+.PHONY : src/stockmarket.cpp.o
 
-transaction.i: transaction.cpp.i
-.PHONY : transaction.i
+src/stockmarket.i: src/stockmarket.cpp.i
+.PHONY : src/stockmarket.i
 
 # target to preprocess a source file
-transaction.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/transaction.cpp.i
-.PHONY : transaction.cpp.i
+src/stockmarket.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/src/stockmarket.cpp.i
+.PHONY : src/stockmarket.cpp.i
 
-transaction.s: transaction.cpp.s
-.PHONY : transaction.s
+src/stockmarket.s: src/stockmarket.cpp.s
+.PHONY : src/stockmarket.s
 
 # target to generate assembly for a file
-transaction.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/transaction.cpp.s
-.PHONY : transaction.cpp.s
+src/stockmarket.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/src/stockmarket.cpp.s
+.PHONY : src/stockmarket.cpp.s
+
+src/transaction.o: src/transaction.cpp.o
+.PHONY : src/transaction.o
+
+# target to build an object file
+src/transaction.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/src/transaction.cpp.o
+.PHONY : src/transaction.cpp.o
+
+src/transaction.i: src/transaction.cpp.i
+.PHONY : src/transaction.i
+
+# target to preprocess a source file
+src/transaction.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/src/transaction.cpp.i
+.PHONY : src/transaction.cpp.i
+
+src/transaction.s: src/transaction.cpp.s
+.PHONY : src/transaction.s
+
+# target to generate assembly for a file
+src/transaction.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/src/transaction.cpp.s
+.PHONY : src/transaction.cpp.s
 
 # Help Target
 help:
@@ -392,36 +392,36 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... CurrencyDataBase_autogen"
 	@echo "... CurrencyDataBase"
-	@echo "... ConnectionTool.o"
-	@echo "... ConnectionTool.i"
-	@echo "... ConnectionTool.s"
 	@echo "... CurrencyDataBase_autogen/mocs_compilation.o"
 	@echo "... CurrencyDataBase_autogen/mocs_compilation.i"
 	@echo "... CurrencyDataBase_autogen/mocs_compilation.s"
-	@echo "... auntification.o"
-	@echo "... auntification.i"
-	@echo "... auntification.s"
-	@echo "... insertaccount.o"
-	@echo "... insertaccount.i"
-	@echo "... insertaccount.s"
-	@echo "... insertbank.o"
-	@echo "... insertbank.i"
-	@echo "... insertbank.s"
-	@echo "... insertcurrency.o"
-	@echo "... insertcurrency.i"
-	@echo "... insertcurrency.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... mainwindow.o"
-	@echo "... mainwindow.i"
-	@echo "... mainwindow.s"
-	@echo "... stockmarket.o"
-	@echo "... stockmarket.i"
-	@echo "... stockmarket.s"
-	@echo "... transaction.o"
-	@echo "... transaction.i"
-	@echo "... transaction.s"
+	@echo "... src/ConnectionTool.o"
+	@echo "... src/ConnectionTool.i"
+	@echo "... src/ConnectionTool.s"
+	@echo "... src/auntification.o"
+	@echo "... src/auntification.i"
+	@echo "... src/auntification.s"
+	@echo "... src/insertaccount.o"
+	@echo "... src/insertaccount.i"
+	@echo "... src/insertaccount.s"
+	@echo "... src/insertbank.o"
+	@echo "... src/insertbank.i"
+	@echo "... src/insertbank.s"
+	@echo "... src/insertcurrency.o"
+	@echo "... src/insertcurrency.i"
+	@echo "... src/insertcurrency.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/mainwindow.o"
+	@echo "... src/mainwindow.i"
+	@echo "... src/mainwindow.s"
+	@echo "... src/stockmarket.o"
+	@echo "... src/stockmarket.i"
+	@echo "... src/stockmarket.s"
+	@echo "... src/transaction.o"
+	@echo "... src/transaction.i"
+	@echo "... src/transaction.s"
 .PHONY : help
 
 
