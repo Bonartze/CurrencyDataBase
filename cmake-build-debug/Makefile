@@ -190,6 +190,30 @@ CurrencyDataBase_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/CurrencyDataBase_autogen/mocs_compilation.cpp.s
 .PHONY : CurrencyDataBase_autogen/mocs_compilation.cpp.s
 
+auntification.o: auntification.cpp.o
+.PHONY : auntification.o
+
+# target to build an object file
+auntification.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/auntification.cpp.o
+.PHONY : auntification.cpp.o
+
+auntification.i: auntification.cpp.i
+.PHONY : auntification.i
+
+# target to preprocess a source file
+auntification.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/auntification.cpp.i
+.PHONY : auntification.cpp.i
+
+auntification.s: auntification.cpp.s
+.PHONY : auntification.s
+
+# target to generate assembly for a file
+auntification.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/auntification.cpp.s
+.PHONY : auntification.cpp.s
+
 insertaccount.o: insertaccount.cpp.o
 .PHONY : insertaccount.o
 
@@ -374,6 +398,9 @@ help:
 	@echo "... CurrencyDataBase_autogen/mocs_compilation.o"
 	@echo "... CurrencyDataBase_autogen/mocs_compilation.i"
 	@echo "... CurrencyDataBase_autogen/mocs_compilation.s"
+	@echo "... auntification.o"
+	@echo "... auntification.i"
+	@echo "... auntification.s"
 	@echo "... insertaccount.o"
 	@echo "... insertaccount.i"
 	@echo "... insertaccount.s"

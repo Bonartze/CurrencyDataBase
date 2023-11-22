@@ -32,8 +32,8 @@ Transaction::Transaction(QWidget *parent) :
     connect(buttons[2], SIGNAL(clicked()), this, SLOT(onButtonClickedDeletedOne()));
 
     for (int i = 0; i < 4; i++) {
-        buttons[i]->setFixedSize(300, 200);
-        buttons[i]->setFont(QFont("Arial", 14, QFont::Bold));
+        buttons[i]->setFixedSize(200, 120);
+        buttons[i]->setFont(QFont("Arial", 10, QFont::Bold));
         buttons[i]->setStyleSheet("background-color: blue;");
 
     }
@@ -60,7 +60,7 @@ Transaction::Transaction(QWidget *parent) :
         insert_transaction_line[i] = new QLineEdit(this);
 
         insert_transaction_line[i]->move(100, 10 + 50 * i);
-        insert_transaction_line[i]->setFixedWidth(200);
+        insert_transaction_line[i]->setFixedWidth(100);
     }
     insert_transaction_line[0]->setPlaceholderText("43");
     insert_transaction_line[1]->setPlaceholderText("12");

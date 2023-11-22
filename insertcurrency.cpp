@@ -17,8 +17,8 @@ InsertCurrency::InsertCurrency(QWidget *parent) :
     buttons[1] = new QPushButton("Currency popularity statistics", this);
 
     for (int i = 0; i < 4; i++) {
-        buttons[i]->setFixedSize(300, 200);
-        buttons[i]->setFont(QFont("Arial", 14, QFont::Bold));
+        buttons[i]->setFixedSize(200, 120);
+        buttons[i]->setFont(QFont("Arial", 10, QFont::Bold));
         buttons[i]->setStyleSheet("background-color: blue;");
     }
 
@@ -42,7 +42,7 @@ InsertCurrency::InsertCurrency(QWidget *parent) :
 
     layout_->setAlignment(Qt::AlignCenter);
     layout_->setSpacing(20);
-    QPixmap img("account.jpg");
+    QPixmap img("cc.png");
     img = img.scaled(400, 400);
     label_ = new QLabel(this);
     label_->setPixmap(img);
@@ -57,7 +57,7 @@ InsertCurrency::InsertCurrency(QWidget *parent) :
     for (int i = 0; i < 2; i++) {
         insert_currency_line[i] = new QLineEdit(this);
         insert_currency_line[i]->move(100, 10 + 50 * i);
-        insert_currency_line[i]->setFixedWidth(200);
+        insert_currency_line[i]->setFixedWidth(100);
     }
     insert_currency_line[0]->setPlaceholderText("43");
     insert_currency_line[1]->setPlaceholderText("WorldCoin");

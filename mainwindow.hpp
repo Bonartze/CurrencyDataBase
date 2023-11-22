@@ -4,6 +4,7 @@
 #include <QWidget>
 #include <QPushButton>
 #include <QMessageBox>
+#include <QObject>
 #include <QMainWindow>
 #include <vector>
 #include <pqxx/pqxx>
@@ -11,6 +12,7 @@
 #include "insertbank.hpp"
 #include "insertaccount.hpp"
 #include "insertcurrency.hpp"
+#include "auntification.hpp"
 #include "transaction.hpp"
 #include "stockmarket.hpp"
 
@@ -24,29 +26,34 @@ Q_OBJECT
 public:
     explicit MainWindow(QWidget *parent = nullptr);
 
-    ~MainWindow() override;
+    virtual ~MainWindow() override;
 
 private slots:
 
-    void onButtonClicked0();
+    void onButtonClickedBankManage();
 
-    void onButtonClicked1();
+    void onButtonClickedAccountManage();
 
-    void onButtonClicked2();
+    void onButtonClickedCurrencyManage();
 
-    void onButtonClicked3();
+    void onButtonClickedStockMarketManage();
 
-    void onButtonClicked4();
+    void onButtonClickedTransactionManage();
 
-    void onButtonClicked5();
+    void onButtonClickedAuntificationManage();
 
 private:
+    QVBoxLayout *menuLayout;
+    QVBoxLayout *contentLayout;
+    QHBoxLayout *mainLayout;
     QVBoxLayout *vl;
     QHBoxLayout *layout;
     QLabel *label;
     Ui::MainWindow *ui;
     std::vector<QWidget *> windows_for_insert;
+    QWidget *auntification;
     std::vector<QPushButton *> insert_buttons;
+    QStackedWidget *stackedWidget;
 };
 
 #endif

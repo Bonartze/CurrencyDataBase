@@ -17,9 +17,9 @@ StockMarket::StockMarket(QWidget *parent) :
     buttons[2] = new QPushButton("Delete note from the table", this);
 
     for (int i = 0; i < 4; i++) {
-        buttons[i]->setFixedSize(300, 200);
+        buttons[i]->setFixedSize(200, 120);
         buttons[i]->move(100, 10 + 50 * i);
-        buttons[i]->setFont(QFont("Arial", 14, QFont::Bold));
+        buttons[i]->setFont(QFont("Arial", 10, QFont::Bold));
         buttons[i]->setStyleSheet("background-color: blue;");
     }
 
@@ -50,7 +50,7 @@ StockMarket::StockMarket(QWidget *parent) :
     for (int i = 0; i < 5; i++) {
         insert_stock_market_line[i] = new QLineEdit(this);
         insert_stock_market_line[i]->move(150, 10 + 50 * i);
-        insert_stock_market_line[i]->setFixedWidth(200);
+        insert_stock_market_line[i]->setFixedWidth(100);
     }
 
     insert_stock_market_line[0]->setPlaceholderText("43");

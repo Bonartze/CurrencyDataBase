@@ -41,7 +41,10 @@ add_executable(CurrencyDataBase
         transaction.hpp
         transaction.ui
         ConnectionTool.cpp
-        ConnectionTool.hpp)
+        ConnectionTool.hpp
+        auntification.cpp
+        auntification.hpp
+        auntification.ui)
 
 target_link_libraries(CurrencyDataBase
         Qt5::Core

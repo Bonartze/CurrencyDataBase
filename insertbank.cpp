@@ -22,9 +22,9 @@ InsertBank::InsertBank(QWidget *parent) : QMainWindow(parent), ui(new Ui::Insert
 
 
     for (int i = 0; i < 4; i++) {
-        buttons[i]->setFixedSize(300, 200);
+        buttons[i]->setFixedSize(200, 120);
         buttons[i]->setStyleSheet("background-color: blue;");
-        buttons[i]->setFont(QFont("Arial", 14, QFont::Bold));
+        buttons[i]->setFont(QFont("Arial", 10, QFont::Bold));
     }
 
     connect(buttons[0], SIGNAL(clicked()), this, SLOT(onButtonClicked()));
@@ -56,7 +56,7 @@ InsertBank::InsertBank(QWidget *parent) : QMainWindow(parent), ui(new Ui::Insert
     for (int i = 0; i < 2; i++) {
         insert_line_bank[i] = new QLineEdit(this);
         insert_line_bank[i]->move(100, 10 + 50 * i);
-        insert_line_bank[i]->setFixedWidth(200);
+        insert_line_bank[i]->setFixedWidth(100);
     }
     insert_line_bank[0]->setPlaceholderText("12");
     insert_line_bank[1]->setPlaceholderText("SDM");

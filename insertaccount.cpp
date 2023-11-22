@@ -39,8 +39,8 @@ InsertAccount::InsertAccount(QWidget *parent) : QMainWindow(parent), ui(new Ui::
     connect(buttons[4], SIGNAL(clicked()), this, SLOT(onButtonClickedDeleted()));
 
     for (int i = 0; i < 5; i++) {
-        buttons[i]->setFixedSize(300, 200);
-        buttons[i]->setFont(QFont("Arial", 14, QFont::Bold));
+        buttons[i]->setFixedSize(200, 120);
+        buttons[i]->setFont(QFont("Arial", 10, QFont::Bold));
         buttons[i]->setStyleSheet("background-color: blue;");
     }
 
@@ -65,7 +65,7 @@ InsertAccount::InsertAccount(QWidget *parent) : QMainWindow(parent), ui(new Ui::
     for (int i = 0; i < 4; i++) {
         insert_line[i] = new QLineEdit(this);
         insert_line[i]->move(100, 10 + 50 * i);
-        insert_line[i]->setFixedWidth(200);
+        insert_line[i]->setFixedWidth(100);
     }
     insert_line[0]->setPlaceholderText("123");
     insert_line[1]->setPlaceholderText("1234.5");
