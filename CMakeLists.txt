@@ -18,6 +18,7 @@ find_package(Qt5 COMPONENTS
         Gui
         Widgets
         Charts
+        Network
         REQUIRED)
 
 
@@ -44,12 +45,22 @@ add_executable(CurrencyDataBase
         ./src/ConnectionTool.hpp
         ./src/auntification.cpp
         ./src/auntification.hpp
-        ./src/auntification.ui)
+        ./src/auntification.ui
+        src/registration.cpp
+        src/registration.hpp
+        src/registration.ui
+        src/registration.cpp
+        src/registration.hpp
+        src/registration.ui
+        src/managetables.cpp
+        src/managetables.hpp
+        src/managetables.ui)
 
 target_link_libraries(CurrencyDataBase
         Qt5::Core
         Qt5::Gui
         Qt5::Widgets
         Qt5::Charts
+        Qt5::Network
         ${PQXX_LIB} ${PQ_LIB}
 )
