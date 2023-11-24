@@ -111,6 +111,7 @@ void Transaction::onButtonClickedTransactionStatistics() {
         }
         catch (...) {
             QMessageBox::critical(nullptr, "Error", "Empty query result", QMessageBox::Ok);
+            return;
         }
 
         QStringList categories;
@@ -145,6 +146,7 @@ void Transaction::onButtonClickedTransactionStatistics() {
         chartView = new QtCharts::QChartView(chart);
         chartView->setRenderHint(QPainter::Antialiasing);
         chartView->setWindowTitle("Diagram");
+        chartView->setFixedSize(600, 600);
         chartView->show();
     }
     catch (std::exception &ex) {

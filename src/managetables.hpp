@@ -1,7 +1,3 @@
-//
-// Created by ivan on 24.11.23.
-//
-
 #ifndef CURRENCYDATABASE_MANAGETABLES_HPP
 #define CURRENCYDATABASE_MANAGETABLES_HPP
 
@@ -17,6 +13,7 @@ Q_OBJECT
 
 public:
     explicit ManageTables(QWidget *parent = nullptr);
+
     ~ManageTables() override;
 
 private:
@@ -24,4 +21,4 @@ private:
 };
 
 
-#endif //CURRENCYDATABASE_MANAGETABLES_HPP
+#endif

@@ -3,8 +3,8 @@
     <author/>
     <comment/>
     <exportmacro/>
-    <class>Registration</class>
-    <widget class="QWidget" name="Registration">
+    <class>registration</class>
+    <widget class="QWidget" name="registration">
         <property name="geometry">
             <rect>
                 <x>0</x>
@@ -14,7 +14,7 @@
             </rect>
         </property>
         <property name="windowTitle">
-            <string>Registration</string>
+            <string>registration</string>
         </property>
     </widget>
     <pixmapfunction/>

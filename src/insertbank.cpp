@@ -118,6 +118,7 @@ void InsertBank::onButtonCLickedChart() {
 
     chartview = new QChartView(chart);
     chartview->setWindowTitle("PieChart");
+    chartview->setFixedSize(600, 600);
     chartview->show();
 }
 

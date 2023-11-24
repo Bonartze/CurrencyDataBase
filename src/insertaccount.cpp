@@ -106,11 +106,12 @@ void InsertAccount::onButtonClickedBalanceChangeEachYear() {
                             "LEFT JOIN public.\"Account\" a ON b.id = a.bank_id\n"
                             "GROUP BY b.id, b.name;");
     try {
-        if (res_query.empty())
+        if (res_query.empty() || res_query[0]["bank_name"].as<int>() == 0.0)
             throw QException();
     }
     catch (...) {
         QMessageBox::critical(nullptr, "Error", "Empty query result", QMessageBox::Ok);
+        return;
     }
 
     series[0] = new QPieSeries();
@@ -126,8 +127,8 @@ void InsertAccount::onButtonClickedBalanceChangeEachYear() {
         double percentage_of_usage = row["percentage_of_usage"].as<double>();
 
         slice[0] = new QPieSlice(bank_name, percentage_of_usage);
-        slice[0]->setLabel(QString("%1: %2%").arg(bank_name).arg(QString::number(percentage_of_usage, 'f', 2)));
-        series[0]->append(slice[0]);
+        //  slice[0]->setLabel(QString("%1: %2%").arg(bank_name).arg(QString::number(percentage_of_usage, 'f', 2)));
+        //  series[0]->append(slice[0]);
     }
 
     chart[0] = new QChart();
@@ -136,6 +137,7 @@ void InsertAccount::onButtonClickedBalanceChangeEachYear() {
 
     chartview[0] = new QChartView(chart[0]);
     chartview[0]->setWindowTitle("PieChart");
+    chartview[0]->setFixedSize(600, 600);
     chartview[0]->show();
 }
 
@@ -177,7 +179,8 @@ void InsertAccount::onButtonClickedStockMarketUsage() {
     chart[1]->setTitle("Stock markets usage percentage");
 
     chartview[1] = new QChartView(chart[1]);
-    chartview[0]->setWindowTitle("PieChart");
+    chartview[1]->setWindowTitle("PieChart");
+    chartview[1]->setFixedSize(600, 600);
     chartview[1]->show();
 }
 

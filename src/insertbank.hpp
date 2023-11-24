@@ -5,6 +5,7 @@
 #include <QMainWindow>
 #include <QPushButton>
 #include <QLineEdit>
+#include <QStackedWidget>
 #include <QtCharts>
 #include <QChartView>
 #include <QPieSeries>
@@ -45,10 +46,12 @@ private:
 
     std::vector<QLabel *> labels;
 
+
     QHBoxLayout *layout_;
     QVBoxLayout *vl_;
     QLabel *label_;
     QWidget *centralWidget;
+
 };
 
 

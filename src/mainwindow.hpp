@@ -9,12 +9,19 @@
 #include <vector>
 #include <pqxx/pqxx>
 #include <exception>
+#include <QtNetwork/QNetworkAccessManager>
+#include <QtNetwork/QNetworkRequest>
+#include <QtNetwork/QNetworkReply>
+#include <QUrlQuery>
+#include <QUrl>
 #include "insertbank.hpp"
 #include "insertaccount.hpp"
 #include "insertcurrency.hpp"
 #include "auntification.hpp"
 #include "transaction.hpp"
 #include "stockmarket.hpp"
+#include "managetables.hpp"
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -42,6 +49,8 @@ private slots:
 
     void onButtonClickedAuntificationManage();
 
+    void onButtonClickedManageTables();
+
 private:
     QVBoxLayout *menuLayout;
     QVBoxLayout *contentLayout;
@@ -50,10 +59,10 @@ private:
     QHBoxLayout *layout;
     QLabel *label;
     Ui::MainWindow *ui;
+    QNetworkAccessManager *manager;
     std::vector<QWidget *> windows_for_insert;
-    QWidget *auntification;
+    Auntification *auntification;
     std::vector<QPushButton *> insert_buttons;
-    QStackedWidget *stackedWidget;
 };
 
 #endif

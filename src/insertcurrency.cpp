@@ -42,7 +42,7 @@ InsertCurrency::InsertCurrency(QWidget *parent) :
 
     layout_->setAlignment(Qt::AlignCenter);
     layout_->setSpacing(20);
-    QPixmap img("cc.png");
+    QPixmap img("cc.jpg");
     img = img.scaled(400, 400);
     label_ = new QLabel(this);
     label_->setPixmap(img);
@@ -75,6 +75,8 @@ void InsertCurrency::onButtonClicked() {
         std::string name = insert_currency_line[1]->text().toStdString();
         pqxx::work w(ConnectionTool::GetConnect());
         w.exec_params("INSERT INTO public.\"Currency\" VALUES ($1, $2);", id, name);
+
+
         w.commit();
         for (int i = 0; i < 2; i++)
             insert_currency_line[i]->clear();
@@ -147,11 +149,12 @@ void InsertCurrency::onButtonCLickedChart() {
         chart->setTitle("Currency popularity");
 
         chartview = new QChartView(chart);
-        chartview->show();
         chartview->setWindowTitle("PieChart");
         for (const auto &slice: series->slices()) {
             slice->setLabel(QString("%1%\n%2").arg(QString::number(slice->percentage(), 'f', 2)).arg(slice->label()));
         }
+        chartview->setFixedSize(600, 600);
+        chartview->show();
     }
     catch (std::exception &ex) {
         QMessageBox::critical(nullptr, "Error", ex.what(), QMessageBox::Ok);
