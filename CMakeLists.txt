@@ -54,7 +54,13 @@ add_executable(CurrencyDataBase
         src/registration.ui
         src/managetables.cpp
         src/managetables.hpp
-        src/managetables.ui)
+        src/managetables.ui
+        src/account.cpp
+        src/account.hpp
+        src/account.ui
+        src/mydialog.cpp
+        src/mydialog.hpp
+        src/mydialog.ui)
 
 target_link_libraries(CurrencyDataBase
         Qt5::Core

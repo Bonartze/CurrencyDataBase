@@ -32,13 +32,6 @@ public:
 
 private slots:
 
-    void onButtonClickedDeleted();
-
-    void onButtonClickedDeletedOne();
-
-
-    void onButtonClicked();
-
     void onButtonClickedTransactionStatistics();
 
 
@@ -50,13 +43,11 @@ private:
     QtCharts::QChartView *chartView;
     QtCharts::QValueAxis *axisY;
 
-    std::vector<QLineEdit *> insert_transaction_line;
-    std::vector<QPushButton *> buttons;
-    std::vector<QLabel *> labels;
+    QPushButton *buttons;
 
+    QLabel *label_;
     QHBoxLayout *layout_;
     QVBoxLayout *vl_;
-    QLabel *label_;
     QWidget *centralWidget;
 
     Ui::Transaction *ui;

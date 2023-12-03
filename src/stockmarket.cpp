@@ -7,30 +7,24 @@
 StockMarket::StockMarket(QWidget *parent) :
         QMainWindow(parent), ui(new Ui::StockMarket) {
     ui->setupUi(this);
-    buttons.resize(4);
-    insert_stock_market_line.resize(5);
-    labels.resize(5);
-    QFont font("Arial", 10, QFont::Bold);
-    buttons[0] = new QPushButton("Insert data", this);
-    buttons[1] = new QPushButton("Get statistics of currency's sales", this);
-    buttons[3] = new QPushButton("Clear the table", this);
-    buttons[2] = new QPushButton("Delete note from the table", this);
-
-    for (int i = 0; i < 4; i++) {
-        buttons[i]->setFixedSize(200, 120);
-        buttons[i]->move(100, 10 + 50 * i);
-        buttons[i]->setFont(QFont("Arial", 10, QFont::Bold));
-        buttons[i]->setStyleSheet("background-color: blue;");
-    }
-
-    connect(buttons[0], SIGNAL(clicked()), this, SLOT(onButtonClicked()));
-    connect(buttons[1], SIGNAL(clicked()), this, SLOT(onButtonClickedIncomeCurrency()));
-    connect(buttons[3], SIGNAL(clicked()), this, SLOT(onButtonClickedDeleted()));
-    connect(buttons[2], SIGNAL(clicked()), this, SLOT(onButtonClickedDeletedOne()));
+    button = new QPushButton("Get statistics of currency's sales", this);
+    button->setFixedSize(800, 120);
+    button->setFont(QFont("Arial", 12, QFont::Bold));
+    button->setStyleSheet("QPushButton {"
+                          "    background-color: #333333;"
+                          "    color: #ffffff;"
+                          "    border: 2px solid #ffffff;"
+                          "    border-radius: 10px;"
+                          "}"
+                          "QPushButton:hover {"
+                          "    background-color: #555555;"
+                          "}"
+                          "QPushButton:pressed {"
+                          "    background-color: #777777;"
+                          "}");
+    connect(button, SIGNAL(clicked()), this, SLOT(onButtonClickedIncomeCurrency()));
     layout_ = new QHBoxLayout();
-    for (int i = 0; i < 4; i++)
-        layout_->addWidget(buttons[i]);
-
+    layout_->addWidget(button);
     layout_->setAlignment(Qt::AlignCenter);
     layout_->setSpacing(20);
     QPixmap img("currency.jpg");
@@ -45,135 +39,69 @@ StockMarket::StockMarket(QWidget *parent) :
     centralWidget->setLayout(vl_);
 
     setCentralWidget(centralWidget);
-
-    insert_stock_market_line.resize(5);
-    for (int i = 0; i < 5; i++) {
-        insert_stock_market_line[i] = new QLineEdit(this);
-        insert_stock_market_line[i]->move(150, 10 + 50 * i);
-        insert_stock_market_line[i]->setFixedWidth(100);
-    }
-
-    insert_stock_market_line[0]->setPlaceholderText("43");
-    insert_stock_market_line[1]->setPlaceholderText("12");
-    insert_stock_market_line[2]->setPlaceholderText("13");
-    insert_stock_market_line[3]->setPlaceholderText("43.4");
-    insert_stock_market_line[4]->setPlaceholderText("1973");
-
-
-    labels[0] = new QLabel("Stock id: ", this);
-    labels[1] = new QLabel("Currency-i id: ", this);
-    labels[2] = new QLabel("Currency-o id: ", this);
-    labels[3] = new QLabel("Rate: ", this);
-    labels[4] = new QLabel("Date (year): ", this);
-
-    for (int i = 0; i < 5; i++) {
-        labels[i]->move(5, 10 + 50 * i);
-        labels[i]->setFont(font);
-        labels[i]->show();
-    }
 }
 
 StockMarket::~StockMarket() {
     delete ui;
 }
 
-void StockMarket::onButtonClicked() {
-    try {
-        std::string id = insert_stock_market_line[0]->text().toStdString();
-        std::string currency_id_from = insert_stock_market_line[1]->text().toStdString();
-        std::string currency_id_to = insert_stock_market_line[2]->text().toStdString();
-        std::string rate_ = insert_stock_market_line[3]->text().toStdString();
-        std::string date = insert_stock_market_line[4]->text().toStdString();
-        pqxx::work w(ConnectionTool::GetConnect());
-        w.exec_params("INSERT INTO public.\"StockMarket\" VALUES ($1, $2, $3, $4, $5)", id, currency_id_from,
-                      currency_id_to, rate_, date);
-        w.commit();
-        for (int i = 0; i < 5; i++)
-            insert_stock_market_line[i]->clear();
-    }
-    catch (std::exception &ex) {
-        QMessageBox::critical(nullptr, "Error", ex.what(), QMessageBox::Ok);
-    }
-}
 
 void StockMarket::onButtonClickedIncomeCurrency() {
+    using namespace QtCharts;
+
     try {
-        using namespace QtCharts;
-        QBarSeries *series = new QBarSeries();
         pqxx::work w(ConnectionTool::GetConnect());
-        auto res_query = w.exec("SELECT public.\"Currency\".name, SUM(public.\"StockMarket\".rate) \n"
-                                "FROM public.\"Currency\"\n"
-                                "JOIN public.\"StockMarket\" ON public.\"StockMarket\".currecny_id_to = public.\"Currency\".id\n"
-                                "GROUP BY public.\"Currency\".name\n"
-                                "ORDER BY SUM(public.\"StockMarket\".rate) DESC;");
-        try {
-            if (res_query.empty())
-                throw new QException();
-        }
-        catch (...) {
-            QMessageBox::critical(nullptr, "Error", "Empty query result", QMessageBox::Ok);
-        }
-        QStringList categories;
-        barSet = new QtCharts::QBarSet("Transacted Money");
+        auto res_query = w.exec(
+                "SELECT sm.date AS year, COALESCE(SUM(sm.amount), 0) AS total_stock_amount "
+                "FROM public.\"StockMarket\" sm "
+                "LEFT OUTER JOIN public.\"Account\" a ON sm.id = a.stock_id "
+                "GROUP BY year;");
+
+        QPieSeries *series = new QPieSeries();
+        QChart *chart = new QChart();
+        QChartView *chartView = new QChartView(chart);
+
+        chart->setTheme(QChart::ChartThemeDark);
+
+        QVector<QColor> sliceColors = {QColor(30, 130, 76), QColor(214, 48, 49), QColor(244, 208, 63),
+                                       QColor(66, 133, 244), QColor(232, 126, 4), QColor(153, 102, 255),
+                                       QColor(255, 193, 7), QColor(0, 123, 255), QColor(255, 61, 127)};
+
+        int colorIndex = 0;
 
         for (const auto &row: res_query) {
-            QString year = QString::fromStdString(row[0].c_str());
-            categories << year;
+            int year = row["year"].as<int>();
+            qreal totalAmount = row["total_stock_amount"].as<qreal>();
 
-            double amount = row[1].as<double>();
-            barSet->append(amount);
+            QPieSlice *slice = new QPieSlice(QString::number(year), totalAmount);
+            slice->setBrush(sliceColors[colorIndex % sliceColors.size()]);
+            slice->setLabel(QString("%1: %2").arg(QString::number(year), QString::number(totalAmount, 'f', 1)));
+            series->append(slice);
+
+            colorIndex++;
         }
 
-        series = new QtCharts::QBarSeries();
-        series->append(barSet);
-
-        chart = new QtCharts::QChart();
         chart->addSeries(series);
-        chart->setTitle("Converted currency");
 
-        axisX = new QtCharts::QBarCategoryAxis();
-        axisX->append(categories);
-        axisX->setTitleText("Name of currency");
-        chart->addAxis(axisX, Qt::AlignBottom);
-        series->attachAxis(axisX);
+        chart->setTitle("Common income of stock markets");
+        chart->legend()->setVisible(true);
+        chart->legend()->setAlignment(Qt::AlignTop);
 
-        axisY = new QtCharts::QValueAxis();
-        axisY->setTitleText("Transacted Money");
-        chart->addAxis(axisY, Qt::AlignLeft);
-        series->attachAxis(axisY);
-
-        chartView = new QtCharts::QChartView(chart);
         chartView->setRenderHint(QPainter::Antialiasing);
-        chartView->setWindowTitle("Diagram");
+        chartView->setWindowTitle("StockMarketDataPieChart");
+
+        QPalette chartViewPalette = chartView->palette();
+        chartViewPalette.setColor(QPalette::Window, QColor(53, 53, 53));
+        chartViewPalette.setColor(QPalette::WindowText, Qt::white);
+        chartView->setPalette(chartViewPalette);
+
         chartView->setFixedSize(600, 600);
+
         chartView->show();
     }
     catch (std::exception &ex) {
-        QMessageBox::critical(nullptr, "Error", ex.what(), QMessageBox::Ok);
+        QMessageBox::critical(nullptr, "Error", "Empty query result", QMessageBox::Ok);
+        return;
     }
 }
 
-void StockMarket::onButtonClickedDeleted() {
-    try {
-        pqxx::work w(ConnectionTool::GetConnect());
-        auto res_query = w.exec("DELETE FROM public.\"StockMarket\";");
-        w.commit();
-    }
-    catch (std::exception &ex) {
-        QMessageBox::critical(nullptr, "Error", ex.what(), QMessageBox::Ok);
-    }
-}
-
-void StockMarket::onButtonClickedDeletedOne() {
-    try {
-        pqxx::work w(ConnectionTool::GetConnect());
-        int id = insert_stock_market_line[0]->text().toInt();
-        w.exec_params("DELETE FROM public.\"StockMarket\" WHERE id = $1", id);
-        w.commit();
-        for (int i = 0; i < 5; i++)
-            insert_stock_market_line[i]->clear();
-    }
-    catch (std::exception &ex) {
-        QMessageBox::critical(nullptr, "Error", ex.what(), QMessageBox::Ok);
-    }
-}

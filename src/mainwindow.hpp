@@ -3,8 +3,10 @@
 
 #include <QWidget>
 #include <QPushButton>
+#include <QInputDialog>
 #include <QMessageBox>
 #include <QObject>
+#include <fstream>
 #include <QMainWindow>
 #include <vector>
 #include <pqxx/pqxx>
@@ -59,10 +61,10 @@ private:
     QHBoxLayout *layout;
     QLabel *label;
     Ui::MainWindow *ui;
-    QNetworkAccessManager *manager;
     std::vector<QWidget *> windows_for_insert;
     Auntification *auntification;
     std::vector<QPushButton *> insert_buttons;
+    QNetworkAccessManager *manager;
 };
 
 #endif

@@ -8,6 +8,8 @@
 #include <QMessageBox>
 #include <QLineEdit>
 #include <QtCharts/QChartView>
+#include <QPieSeries>
+#include <QDateTime>
 #include <QtCharts/QScatterSeries>
 #include <QStringList>
 #include <QCategoryAxis>
@@ -32,20 +34,12 @@ public:
 
 private slots:
 
-    void onButtonClickedDeleted();
-
-    void onButtonClickedDeletedOne();
-
-    void onButtonClicked();
-
     void onButtonClickedIncomeCurrency();
 
 private:
-    std::vector<QLineEdit *> insert_stock_market_line;
     Ui::StockMarket *ui;
 
-    std::vector<QPushButton *> buttons;
-    std::vector<QLabel *> labels;
+    QPushButton *button;
 
     QtCharts::QBarSet *barSet;
     QtCharts::QChart *chart;

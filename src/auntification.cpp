@@ -14,9 +14,9 @@ Auntification::Auntification(QWidget *parent) :
     sign_up = new QPushButton("Sign up");
     log_in = new QPushButton("Log in");
     lo = new QHBoxLayout(this);
-    account = new QMainWindow();
     stackedWidget = new QStackedWidget();
 
+    accounts.resize(1000);
     lines.resize(2);
     labels.resize(3);
 
@@ -27,6 +27,10 @@ Auntification::Auntification(QWidget *parent) :
         lines[i] = new QLineEdit();
         lines[i]->setFixedWidth(180);
         labels[i] = new QLabel();
+    }
+    for (size_t i = 0; i < 1000; i++) {
+        accounts[i] = new Account(nullptr, i);
+        stackedWidget->addWidget(accounts[i]);
     }
 
     labels[2] = new QLabel();
@@ -47,8 +51,6 @@ Auntification::Auntification(QWidget *parent) :
     auntForm->addRow(sb);
     layout->addLayout(auntForm);
 
-    stackedWidget->addWidget(account);
-
     connect(sign_up, SIGNAL(clicked()), this, SLOT(onButtonClickSignUp()));
     connect(log_in, SIGNAL(clicked()), this, SLOT(onButtonClickedLogIn()));
 }
@@ -64,10 +66,15 @@ void Auntification::onButtonClickSignUp() {
 
 void Auntification::onButtonClickedLogIn() {
     pqxx::work w(ConnectionTool::GetConnect());
+
     std::string login_line = lines[0]->text().toStdString();
     std::string password_line = lines[1]->text().toStdString();
     std::string real_password;
-    auto query = w.exec_params("SELECT password FROM public.\"Account\" WHERE login = $1", login_line);
+
+    auto query = w.exec_params("SELECT id, password FROM public.\"Account\" WHERE login = $1", login_line);
+    int id;
+    if (!query.empty())
+        id = query[0]["id"].as<int>();
     if (!query.empty() && !query[0]["password"].is_null()) {
         real_password = query[0]["password"].as<std::string>();
     }
@@ -78,7 +85,7 @@ void Auntification::onButtonClickedLogIn() {
     else if (real_password != password_line)
         sb->showMessage("Wrong password", 3000);
     else {
-        stackedWidget->setCurrentIndex(0);
+        stackedWidget->setCurrentIndex(12 + id);
     }
 }
 

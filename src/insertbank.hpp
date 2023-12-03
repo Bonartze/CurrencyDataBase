@@ -25,13 +25,7 @@ public:
     ~InsertBank() override;
 
 private slots:
-
-    void onButtonClicked();
-
-    void onButtonClickedDeleted();
-
-    void onButtonClickedDeletedOne();
-
+    void onButtonClickedChartLoginBank();
     void onButtonCLickedChart();
 
 private:
@@ -40,18 +34,14 @@ private:
     QChart *chart;
     QChartView *chartview;
 
-    std::vector<QLineEdit *> insert_line_bank;
     std::vector<QPushButton *> buttons;
     Ui::InsertBank *ui;
 
-    std::vector<QLabel *> labels;
-
+    QLabel* label_;
 
     QHBoxLayout *layout_;
     QVBoxLayout *vl_;
-    QLabel *label_;
     QWidget *centralWidget;
-
 };
 
 

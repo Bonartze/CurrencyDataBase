@@ -4,6 +4,7 @@
 #include <QWidget>
 #include <QFormLayout>
 #include "registration.hpp"
+#include "account.hpp"
 #include <QLabel>
 #include <QLineEdit>
 #include <QPushButton>
@@ -24,7 +25,8 @@ public:
 
     ~Auntification() override;
 
-    QStackedWidget*& getStackedWidget();
+    QStackedWidget *&getStackedWidget();
+
 private slots:
 
     void onButtonClickSignUp();
@@ -42,8 +44,8 @@ private:
     QPushButton *sign_up;
     QPushButton *log_in;
     QHBoxLayout *lo;
-    QMainWindow *account;
-    QStackedWidget* stackedWidget;
+    std::vector<Account *> accounts;
+    QStackedWidget *stackedWidget;
 };
 
 

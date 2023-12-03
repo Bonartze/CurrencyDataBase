@@ -57,10 +57,10 @@ RM = /snap/clion/250/bin/cmake/linux/x64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ivan/Desktop/CurrencyDataBase_
+CMAKE_SOURCE_DIR = /home/ivan/Desktop/CurrencyDataBase
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ivan/Desktop/CurrencyDataBase_/cmake-build-debug
+CMAKE_BINARY_DIR = /home/ivan/Desktop/CurrencyDataBase/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/CurrencyDataBase_/cmake-build-debug/CMakeFiles /home/ivan/Desktop/CurrencyDataBase_/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/CurrencyDataBase/cmake-build-debug/CMakeFiles /home/ivan/Desktop/CurrencyDataBase/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/CurrencyDataBase_/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Desktop/CurrencyDataBase/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -189,6 +189,30 @@ src/ConnectionTool.s: src/ConnectionTool.cpp.s
 src/ConnectionTool.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/src/ConnectionTool.cpp.s
 .PHONY : src/ConnectionTool.cpp.s
+
+src/account.o: src/account.cpp.o
+.PHONY : src/account.o
+
+# target to build an object file
+src/account.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/src/account.cpp.o
+.PHONY : src/account.cpp.o
+
+src/account.i: src/account.cpp.i
+.PHONY : src/account.i
+
+# target to preprocess a source file
+src/account.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/src/account.cpp.i
+.PHONY : src/account.cpp.i
+
+src/account.s: src/account.cpp.s
+.PHONY : src/account.s
+
+# target to generate assembly for a file
+src/account.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/src/account.cpp.s
+.PHONY : src/account.cpp.s
 
 src/auntification.o: src/auntification.cpp.o
 .PHONY : src/auntification.o
@@ -334,6 +358,78 @@ src/mainwindow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/src/mainwindow.cpp.s
 .PHONY : src/mainwindow.cpp.s
 
+src/managetables.o: src/managetables.cpp.o
+.PHONY : src/managetables.o
+
+# target to build an object file
+src/managetables.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/src/managetables.cpp.o
+.PHONY : src/managetables.cpp.o
+
+src/managetables.i: src/managetables.cpp.i
+.PHONY : src/managetables.i
+
+# target to preprocess a source file
+src/managetables.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/src/managetables.cpp.i
+.PHONY : src/managetables.cpp.i
+
+src/managetables.s: src/managetables.cpp.s
+.PHONY : src/managetables.s
+
+# target to generate assembly for a file
+src/managetables.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/src/managetables.cpp.s
+.PHONY : src/managetables.cpp.s
+
+src/mydialog.o: src/mydialog.cpp.o
+.PHONY : src/mydialog.o
+
+# target to build an object file
+src/mydialog.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/src/mydialog.cpp.o
+.PHONY : src/mydialog.cpp.o
+
+src/mydialog.i: src/mydialog.cpp.i
+.PHONY : src/mydialog.i
+
+# target to preprocess a source file
+src/mydialog.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/src/mydialog.cpp.i
+.PHONY : src/mydialog.cpp.i
+
+src/mydialog.s: src/mydialog.cpp.s
+.PHONY : src/mydialog.s
+
+# target to generate assembly for a file
+src/mydialog.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/src/mydialog.cpp.s
+.PHONY : src/mydialog.cpp.s
+
+src/registration.o: src/registration.cpp.o
+.PHONY : src/registration.o
+
+# target to build an object file
+src/registration.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/src/registration.cpp.o
+.PHONY : src/registration.cpp.o
+
+src/registration.i: src/registration.cpp.i
+.PHONY : src/registration.i
+
+# target to preprocess a source file
+src/registration.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/src/registration.cpp.i
+.PHONY : src/registration.cpp.i
+
+src/registration.s: src/registration.cpp.s
+.PHONY : src/registration.s
+
+# target to generate assembly for a file
+src/registration.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CurrencyDataBase.dir/build.make CMakeFiles/CurrencyDataBase.dir/src/registration.cpp.s
+.PHONY : src/registration.cpp.s
+
 src/stockmarket.o: src/stockmarket.cpp.o
 .PHONY : src/stockmarket.o
 
@@ -398,6 +494,9 @@ help:
 	@echo "... src/ConnectionTool.o"
 	@echo "... src/ConnectionTool.i"
 	@echo "... src/ConnectionTool.s"
+	@echo "... src/account.o"
+	@echo "... src/account.i"
+	@echo "... src/account.s"
 	@echo "... src/auntification.o"
 	@echo "... src/auntification.i"
 	@echo "... src/auntification.s"
@@ -416,6 +515,15 @@ help:
 	@echo "... src/mainwindow.o"
 	@echo "... src/mainwindow.i"
 	@echo "... src/mainwindow.s"
+	@echo "... src/managetables.o"
+	@echo "... src/managetables.i"
+	@echo "... src/managetables.s"
+	@echo "... src/mydialog.o"
+	@echo "... src/mydialog.i"
+	@echo "... src/mydialog.s"
+	@echo "... src/registration.o"
+	@echo "... src/registration.i"
+	@echo "... src/registration.s"
 	@echo "... src/stockmarket.o"
 	@echo "... src/stockmarket.i"
 	@echo "... src/stockmarket.s"

@@ -17,13 +17,30 @@ registration::registration(QWidget *parent) :
         registration_labels[i] = new QLabel();
         registration_lines[i] = new QLineEdit();
         registration_lines[i]->setFixedWidth(180);
+
+        QPalette lineEditPalette = registration_lines[i]->palette();
+        lineEditPalette.setColor(QPalette::Base, QColor(25, 25, 25));
+        lineEditPalette.setColor(QPalette::Text, Qt::white);
+        registration_lines[i]->setPalette(lineEditPalette);
     }
+    QPalette buttonPalette = sign_up_->palette();
+    buttonPalette.setColor(QPalette::Button, QColor(53, 53, 53));
+    buttonPalette.setColor(QPalette::ButtonText, Qt::white);
+    sign_up_->setPalette(buttonPalette);
+
     registration_labels[0]->setText("Make up a login: ");
     registration_labels[1]->setText("Make up a password: ");
     registration_lines[1]->setEchoMode(QLineEdit::Password);
+
     for (size_t i = 0; i < 2; i++)
         registrationTools->addRow(registration_labels[i], registration_lines[i]);
     registrationTools->addWidget(sign_up_);
+
+    QPalette registrationPalette = this->palette();
+    registrationPalette.setColor(QPalette::Window, QColor(53, 53, 53));
+    registrationPalette.setColor(QPalette::WindowText, Qt::white);
+    this->setPalette(registrationPalette);
+
     connect(sign_up_, SIGNAL(clicked()), this, SLOT(onButtonClickedSignUp()));
 }
 
@@ -64,8 +81,8 @@ void registration::onButtonClickedSignUp() {
         statusBar->show();
         return;
     } else {
-         w.exec_params("INSERT INTO public.\"Account\" (login, password) VALUES ($1, $2)", login_line,
-                        password_line);
+        w.exec_params("INSERT INTO public.\"Account\" (login, password) VALUES ($1, $2)", login_line,
+                      password_line);
         w.commit();
         this->close();
     }

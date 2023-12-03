@@ -7,15 +7,18 @@
 MainWindow::MainWindow(QWidget *parent) : QWidget(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
     insert_buttons.resize(7);
+    this->setStyleSheet("background-color: #303030; color: white;");
     windows_for_insert.resize(6);
+
     manager = new QNetworkAccessManager();
+
     auntification = new Auntification();
     windows_for_insert[0] = new InsertBank();
     windows_for_insert[1] = new InsertAccount();
     windows_for_insert[2] = new InsertCurrency();
     windows_for_insert[3] = new StockMarket();
     windows_for_insert[4] = new Transaction();
-    windows_for_insert[5] = new ManageTables();
+    windows_for_insert[5] = new ManageTables(nullptr, auntification->getStackedWidget()); //
 
 
     insert_buttons[0] = new QPushButton("Bank's statistics", this);
@@ -26,19 +29,27 @@ MainWindow::MainWindow(QWidget *parent) : QWidget(parent), ui(new Ui::MainWindow
     insert_buttons[5] = new QPushButton("Manage tables", this);
     insert_buttons[6] = new QPushButton("Authorization", this);
 
-    for (int i = 0; i < 6; i++) {
+    for (int i = 0; i < 7; i++) {
         insert_buttons[i]->setFixedSize(150, 120);
         insert_buttons[i]->setFont(QFont("Arial", 10, QFont::Bold));
-        //    insert_buttons[i]->setStyleSheet("background-color: rgba(0, 0, 0, 0); border: none; color: black;");
-        insert_buttons[i]->setStyleSheet("background-color: blue;");
+        insert_buttons[i]->setStyleSheet("QPushButton {"
+                                         "    background-color: #333333;"
+                                         "    color: #ffffff;"
+                                         "    border: 2px solid #ffffff;"
+                                         "    border-radius: 10px;"
+                                         "}"
+                                         "QPushButton:hover {"
+                                         "    background-color: #555555;"
+                                         "}"
+                                         "QPushButton:pressed {"
+                                         "    background-color: #777777;"
+                                         "}");
     }
-    insert_buttons[6]->setFixedSize(280, 170);
-    insert_buttons[6]->setFont(QFont("Arial", 14, QFont::Bold));
-    insert_buttons[6]->setStyleSheet("background-color: red;");
-    for (auto &window: windows_for_insert) {
-        auntification->getStackedWidget()->addWidget(window);
-    }
-    auntification->getStackedWidget()->addWidget(auntification);
+
+
+    for (auto &window: windows_for_insert)
+        auntification->getStackedWidget()->addWidget(window); // 5, 6, 7, 8, 9, 10
+    auntification->getStackedWidget()->addWidget(auntification); //11
 
     label = new QLabel(this);
     label->setAlignment(Qt::AlignCenter);
@@ -49,7 +60,6 @@ MainWindow::MainWindow(QWidget *parent) : QWidget(parent), ui(new Ui::MainWindow
 
     for (int i = 0; i < 7; i++)
         menuLayout->addWidget(insert_buttons[i]);
-
     contentLayout->addWidget(auntification->getStackedWidget());
     contentLayout->addWidget(label);
 
@@ -58,7 +68,7 @@ MainWindow::MainWindow(QWidget *parent) : QWidget(parent), ui(new Ui::MainWindow
 
     mainLayout->setAlignment(Qt::AlignTop);
 
-    auntification->getStackedWidget()->setCurrentIndex(2);
+    auntification->getStackedWidget()->setCurrentIndex(1005);
 
     connect(insert_buttons[0], &QPushButton::clicked, this, &MainWindow::onButtonClickedBankManage);
     connect(insert_buttons[1], &QPushButton::clicked, this, &MainWindow::onButtonClickedAccountManage);
@@ -94,41 +104,56 @@ MainWindow::~MainWindow() {
 }
 
 void MainWindow::onButtonClickedBankManage() {
-    auntification->getStackedWidget()->setCurrentIndex(1);
+    auntification->getStackedWidget()->setCurrentIndex(1005);
 }
 
 void MainWindow::onButtonClickedAccountManage() {
-    auntification->getStackedWidget()->setCurrentIndex(2);
+    auntification->getStackedWidget()->setCurrentIndex(1006);
 }
 
 void MainWindow::onButtonClickedCurrencyManage() {
-    auntification->getStackedWidget()->setCurrentIndex(3);
+    auntification->getStackedWidget()->setCurrentIndex(1007);
 }
 
 void MainWindow::onButtonClickedStockMarketManage() {
-    auntification->getStackedWidget()->setCurrentIndex(4);
+    auntification->getStackedWidget()->setCurrentIndex(1008);
 }
 
 void MainWindow::onButtonClickedTransactionManage() {
-    auntification->getStackedWidget()->setCurrentIndex(5);
+    auntification->getStackedWidget()->setCurrentIndex(1009);
+}
+
+void MainWindow::onButtonClickedAuntificationManage() {
+    auntification->getStackedWidget()->setCurrentIndex(1011);
 }
 
 void MainWindow::onButtonClickedManageTables() {
-    QString apiUrl = "https://api.telegram.org/bot6346779543:AAGg3aOjwGbQF3po8T2YQkOZGZnEq9xIjFM/sendMessage";
-    QNetworkRequest request{QUrl(apiUrl)};
+    std::ifstream f("../api");
+    std::string apiUrl, chat_id;
+    getline(f, apiUrl);
+    getline(f, chat_id);
+    QString apiU(apiUrl.c_str());
+    QNetworkRequest request{(apiU)};
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/x-www-form-urlencoded");
-    QUrlQuery params;
-    QString rand_string;
+
     const std::string characters = "0123456789";
     std::random_device rd;
     std::mt19937 gen(rd());
     std::uniform_int_distribution<> dis(0, characters.size() - 1);
+
+    std::string rand_code;
     for (int i = 0; i < 4; ++i)
-        rand_string += characters[dis(gen)];
-    params.addQueryItem("chat_id", "1836839005");
-    params.addQueryItem("text", rand_string);
+        rand_code += characters[dis(gen)];
+    QUrlQuery params;
+    params.addQueryItem("chat_id", chat_id.c_str());
+    params.addQueryItem("text", rand_code.c_str());
+    manager->post(request, params.toString(QUrl::FullyEncoded).toUtf8());
+    bool ok;
+    QString entered_code = QInputDialog::getText(this, tr(""), tr("Enter code from telegram\n"), QLineEdit::Normal,
+                                                 QDir::home().dirName(), &ok);
+    if (ok && entered_code == rand_code.c_str()) {
+        auntification->getStackedWidget()->setCurrentIndex(1010);
+    }
 }
 
-void MainWindow::onButtonClickedAuntificationManage() {
-    auntification->getStackedWidget()->setCurrentIndex(7);
-}
+

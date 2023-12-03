@@ -28,18 +28,11 @@ public:
 
 private slots:
 
-    void onButtonClicked();
-
-    void onButtonClickedDeleted();
-
-    void onButtonClickedDeletedOne();
-
     void onButtonClickedBalanceChangeEachYear();
 
     void onButtonClickedStockMarketUsage();
 
 private:
-    std::vector<QLineEdit *> insert_line;
     Ui::InsertAccount *ui;
 
     std::vector<QPushButton *> buttons;
@@ -49,11 +42,10 @@ private:
     std::vector<QChart *> chart;
     std::vector<QChartView *> chartview;
 
-    std::vector<QLabel *> labels;
+    QLabel *label_;
 
     QHBoxLayout *layout_;
     QVBoxLayout *vl_;
-    QLabel *label_;
     QWidget *centralWidget;
 };
 

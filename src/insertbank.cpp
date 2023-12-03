@@ -4,83 +4,89 @@
 
 InsertBank::InsertBank(QWidget *parent) : QMainWindow(parent), ui(new Ui::InsertBank) {
     ui->setupUi(this);
-    labels.resize(2);
-    buttons.resize(4);
-    QFont font("Arial", 10, QFont::Bold);
-    labels[0] = new QLabel("Bank id: ", this);
-    labels[1] = new QLabel("Name: ", this);
-    for (int i = 0; i < 2; i++) {
-        labels[i]->move(10, 10 + 50 * i);
-        labels[i]->setFont(font);
-        labels[i]->show();
-    }
-
-    buttons[1] = new QPushButton("Display bank usage statistics", this);
-    buttons[3] = new QPushButton("Clear the table", this);
-    buttons[0] = new QPushButton("Insert data", this);
-    buttons[2] = new QPushButton("Delete note from the table", this);
-
-
-    for (int i = 0; i < 4; i++) {
-        buttons[i]->setFixedSize(200, 120);
-        buttons[i]->setStyleSheet("background-color: blue;");
-        buttons[i]->setFont(QFont("Arial", 10, QFont::Bold));
-    }
-
-    connect(buttons[0], SIGNAL(clicked()), this, SLOT(onButtonClicked()));
-    connect(buttons[1], SIGNAL(clicked()), this, SLOT(onButtonCLickedChart()));
-    connect(buttons[3], SIGNAL(clicked()), this, SLOT(onButtonClickedDeleted()));
-    connect(buttons[2], SIGNAL(clicked()), this, SLOT(onButtonClickedDeletedOne()));
-
-    insert_line_bank.resize(2);
-
-
+    buttons.resize(2);
+    buttons[0] = new QPushButton("Display bank usage statistics", this);
+    buttons[1] = new QPushButton("Display Bank-Login");
+    QPixmap img("bank.jpg");
     layout_ = new QHBoxLayout();
-    for (int i = 0; i < 4; i++)
-        layout_->addWidget(buttons[i]);
+    label_ = new QLabel(this);
+    vl_ = new QVBoxLayout();
+    centralWidget = new QWidget();
+
+    for (int i = 0; i < 2; i++) {
+        buttons[i]->setFont(QFont("Arial", 12, QFont::Bold));
+        buttons[i]->setFixedSize(600, 120);
+        buttons[i]->setStyleSheet("QPushButton {"
+                                  "    background-color: #333333;"
+                                  "    color: #ffffff;"
+                                  "    border: 2px solid #ffffff;"
+                                  "    border-radius: 10px;"
+                                  "}"
+                                  "QPushButton:hover {"
+                                  "    background-color: #555555;"
+                                  "}"
+                                  "QPushButton:pressed {"
+                                  "    background-color: #777777;"
+                                  "}");
+    }
 
     layout_->setAlignment(Qt::AlignCenter);
     layout_->setSpacing(20);
-    QPixmap img("bank.jpg");
     img = img.scaled(500, 500);
-    label_ = new QLabel(this);
     label_->setPixmap(img);
     label_->setAlignment(Qt::AlignCenter);
-    vl_ = new QVBoxLayout();
     vl_->addWidget(label_);
     vl_->addLayout(layout_);
-    centralWidget = new QWidget();
     centralWidget->setLayout(vl_);
+    for (int i = 0; i < 2; i++)
+        layout_->addWidget(buttons[i]);
 
+    connect(buttons[1], SIGNAL(clicked()), this, SLOT(onButtonClickedChartLoginBank()));
+    connect(buttons[0], SIGNAL(clicked()), this, SLOT(onButtonCLickedChart()));
     setCentralWidget(centralWidget);
-    for (int i = 0; i < 2; i++) {
-        insert_line_bank[i] = new QLineEdit(this);
-        insert_line_bank[i]->move(100, 10 + 50 * i);
-        insert_line_bank[i]->setFixedWidth(100);
-    }
-    insert_line_bank[0]->setPlaceholderText("12");
-    insert_line_bank[1]->setPlaceholderText("SDM");
-
 }
 
 InsertBank::~InsertBank() {
     delete ui;
 }
 
-void InsertBank::onButtonClicked() {
-    try {
-        std::string id = insert_line_bank[0]->text().toStdString();
-        std::string name = insert_line_bank[1]->text().toStdString();
-        pqxx::work w(ConnectionTool::GetConnect());
-        w.exec_params("INSERT INTO public.\"Bank\" VALUES ($1, $2);", id, name);
-        w.commit();
-        for (int i = 0; i < 2; i++)
-            insert_line_bank[i]->clear();
+void InsertBank::onButtonClickedChartLoginBank() {
+
+    pqxx::work w(ConnectionTool::GetConnect());
+    auto result = w.exec(
+            "SELECT acc.login as login, b.name as bank FROM public.\"Account\" AS acc "
+            "RIGHT JOIN public.\"Bank\" AS b"
+            " ON acc.bank_id = b.id;");
+    QTableWidget *tableWidget = new QTableWidget();
+    tableWidget->setColumnCount(2);
+
+    QStringList headers;
+    headers << "Login" << "Bank Name";
+    tableWidget->setHorizontalHeaderLabels(headers);
+
+    int row = 0;
+
+    for (auto el: result) {
+        QString login = el["login"].as<std::string>().c_str();
+        QString bankName = el["bank"].as<std::string>().c_str();
+
+        tableWidget->insertRow(row);
+        tableWidget->setItem(row, 0, new QTableWidgetItem(login));
+        tableWidget->setItem(row, 1, new QTableWidgetItem(bankName));
+        ++row;
     }
-    catch (std::exception &ex) {
-        QMessageBox::critical(nullptr, "Error", ex.what(), QMessageBox::Ok);
-    }
+
+    tableWidget->setFixedSize(250, 500);
+    QPalette pal = tableWidget->palette();
+    pal.setColor(QPalette::Window, QColor(53, 53, 53));
+    pal.setColor(QPalette::WindowText, Qt::white);
+    pal.setColor(QPalette::Base, QColor(25, 25, 25));
+    pal.setColor(QPalette::AlternateBase, QColor(35, 35, 35));
+    tableWidget->setPalette(pal);
+    tableWidget->show();
+
 }
+
 
 void InsertBank::onButtonCLickedChart() {
     pqxx::work w(ConnectionTool::GetConnect());
@@ -95,6 +101,8 @@ void InsertBank::onButtonCLickedChart() {
     }
 
     series = new QPieSeries();
+    chart = new QChart();
+    chartview = new QChartView(chart);
 
     int totalTransactions = 0;
 
@@ -112,38 +120,19 @@ void InsertBank::onButtonCLickedChart() {
         series->append(slice);
     }
 
-    chart = new QChart();
     chart->addSeries(series);
     chart->setTitle("Banks usage");
 
-    chartview = new QChartView(chart);
-    chartview->setWindowTitle("PieChart");
+    chart->setTheme(QChart::ChartThemeDark);
+
+    chartview->setRenderHint(QPainter::Antialiasing);
+
+    QPalette pal = chartview->palette();
+    pal.setColor(QPalette::Window, QColor(53, 53, 53));
+    pal.setColor(QPalette::WindowText, Qt::white);
+    chartview->setPalette(pal);
+
+    chartview->setWindowTitle("BankPieUsage");
     chartview->setFixedSize(600, 600);
     chartview->show();
-}
-
-
-void InsertBank::onButtonClickedDeleted() {
-    try {
-        pqxx::work w(ConnectionTool::GetConnect());
-        auto res_query = w.exec("DELETE FROM public.\"Bank\";");
-        w.commit();
-    }
-    catch (std::exception &ex) {
-        QMessageBox::critical(nullptr, "Error", ex.what(), QMessageBox::Ok);
-    }
-}
-
-void InsertBank::onButtonClickedDeletedOne() {
-    try {
-        pqxx::work w(ConnectionTool::GetConnect());
-        int id = insert_line_bank[0]->text().toInt();
-        w.exec_params("DELETE FROM public.\"Bank\" WHERE id = $1", id);
-        w.commit();
-        for (int i = 0; i < 2; i++)
-            insert_line_bank[i]->clear();
-    }
-    catch (std::exception &ex) {
-        QMessageBox::critical(nullptr, "Error", ex.what(), QMessageBox::Ok);
-    }
 }

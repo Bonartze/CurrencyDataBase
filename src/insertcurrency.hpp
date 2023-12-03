@@ -25,12 +25,6 @@ public:
 
 private slots:
 
-    void onButtonClicked();
-
-    void onButtonClickedDeleted();
-
-    void onButtonClickedDeletedOne();
-
     void onButtonCLickedChart();
 
 
@@ -40,12 +34,9 @@ private:
     QChart *chart;
     QChartView *chartview;
 
-    std::vector<QLineEdit *> insert_currency_line;
     Ui::InsertCurrency *ui;
 
-    std::vector<QPushButton *> buttons;
-
-    std::vector<QLabel *> labels;
+    QPushButton * buttons;
 
     QHBoxLayout *layout_;
     QVBoxLayout *vl_;
