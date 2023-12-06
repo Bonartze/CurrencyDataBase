@@ -66,7 +66,7 @@ Account::Account(QWidget *parent, int id) :
     layout->setAlignment(Qt::AlignTop);
     layout->setSpacing(10);
 
-    currency_list->resize(300, 300);
+    currency_list->resize(850, 300);
     currency_list->move(100, 200);
 
     auto currencies = w.exec("SELECT DISTINCT name FROM public.\"Currency\"");
@@ -95,12 +95,14 @@ void Account::onButtonClickedTopUp() {
 
 void Account::onButtonClickedBuy() {
     MyDialog *myDialog = new MyDialog(nullptr, false, account_id, currency_list, currency_amount, current_balance);
+
     myDialog->setFixedHeight(100);
     myDialog->show();
 }
 
 void Account::onButtonClickedSell() {
     MyDialog *myDialog = new MyDialog(nullptr, true, account_id, currency_list, currency_amount, current_balance);
+
     myDialog->setFixedHeight(100);
     myDialog->show();
 }
@@ -153,11 +155,10 @@ void Account::print_graph() {
 
     chartView->setRenderHint(QPainter::Antialiasing);
     chartView->setParent(this);
-    chartView->move(850, 170);
+    chartView->move(850, 190);
     chartView->resize(850, 850);
     chartView->show();
 }
-
 
 
 

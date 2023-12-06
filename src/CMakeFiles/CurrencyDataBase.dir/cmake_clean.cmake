@@ -1,0 +1,40 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/CurrencyDataBase_autogen.dir/AutogenUsed.txt"
+  "CMakeFiles/CurrencyDataBase_autogen.dir/ParseCache.txt"
+  "CurrencyDataBase_autogen"
+  "CMakeFiles/CurrencyDataBase.dir/ConnectionTool.cpp.o"
+  "CMakeFiles/CurrencyDataBase.dir/ConnectionTool.cpp.o.d"
+  "CMakeFiles/CurrencyDataBase.dir/CurrencyDataBase_autogen/mocs_compilation.cpp.o"
+  "CMakeFiles/CurrencyDataBase.dir/CurrencyDataBase_autogen/mocs_compilation.cpp.o.d"
+  "CMakeFiles/CurrencyDataBase.dir/account.cpp.o"
+  "CMakeFiles/CurrencyDataBase.dir/account.cpp.o.d"
+  "CMakeFiles/CurrencyDataBase.dir/auntification.cpp.o"
+  "CMakeFiles/CurrencyDataBase.dir/auntification.cpp.o.d"
+  "CMakeFiles/CurrencyDataBase.dir/insertaccount.cpp.o"
+  "CMakeFiles/CurrencyDataBase.dir/insertaccount.cpp.o.d"
+  "CMakeFiles/CurrencyDataBase.dir/insertbank.cpp.o"
+  "CMakeFiles/CurrencyDataBase.dir/insertbank.cpp.o.d"
+  "CMakeFiles/CurrencyDataBase.dir/insertcurrency.cpp.o"
+  "CMakeFiles/CurrencyDataBase.dir/insertcurrency.cpp.o.d"
+  "CMakeFiles/CurrencyDataBase.dir/main.cpp.o"
+  "CMakeFiles/CurrencyDataBase.dir/main.cpp.o.d"
+  "CMakeFiles/CurrencyDataBase.dir/mainwindow.cpp.o"
+  "CMakeFiles/CurrencyDataBase.dir/mainwindow.cpp.o.d"
+  "CMakeFiles/CurrencyDataBase.dir/managetables.cpp.o"
+  "CMakeFiles/CurrencyDataBase.dir/managetables.cpp.o.d"
+  "CMakeFiles/CurrencyDataBase.dir/mydialog.cpp.o"
+  "CMakeFiles/CurrencyDataBase.dir/mydialog.cpp.o.d"
+  "CMakeFiles/CurrencyDataBase.dir/registration.cpp.o"
+  "CMakeFiles/CurrencyDataBase.dir/registration.cpp.o.d"
+  "CMakeFiles/CurrencyDataBase.dir/stockmarket.cpp.o"
+  "CMakeFiles/CurrencyDataBase.dir/stockmarket.cpp.o.d"
+  "CMakeFiles/CurrencyDataBase.dir/transaction.cpp.o"
+  "CMakeFiles/CurrencyDataBase.dir/transaction.cpp.o.d"
+  "CurrencyDataBase"
+  "CurrencyDataBase.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/CurrencyDataBase.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

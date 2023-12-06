@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+61fa39025a432e0157f8d01948f5a818 CMakeFiles/CurrencyDataBase_autogen

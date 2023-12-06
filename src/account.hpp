@@ -60,6 +60,7 @@ private:
     int account_id;
     double balance = 0.0;
     std::unordered_map<std::string, double> currency_amount; //currency and its amount user owns
+
 };
 
 
