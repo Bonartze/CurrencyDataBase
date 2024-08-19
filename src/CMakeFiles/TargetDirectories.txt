@@ -1,4 +1,0 @@
-/home/ivan/Desktop/CurrencyDataBase/src/CMakeFiles/CurrencyDataBase.dir
-/home/ivan/Desktop/CurrencyDataBase/src/CMakeFiles/edit_cache.dir
-/home/ivan/Desktop/CurrencyDataBase/src/CMakeFiles/rebuild_cache.dir
-/home/ivan/Desktop/CurrencyDataBase/src/CMakeFiles/CurrencyDataBase_autogen.dir
